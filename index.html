@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nabatian Restaurant - Demo Versionen | Webste Vertrieb</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Maven Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #711521 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .preview-container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 900;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .header .badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .versions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .version-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .version-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #711521, #ad083a);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .version-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        .version-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .version-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+
+        .version-card h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ad083a;
+            margin: 1rem 0;
+        }
+
+        .features {
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        .feature-item {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .feature-item::before {
+            content: '✓';
+            color: #0e9b01;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1.25rem 2.5rem;
+            background: linear-gradient(135deg, #711521, #ad083a);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 8px 25px rgba(113, 21, 33, 0.4);
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(113, 21, 33, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .info-section {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+        }
+
+        .info-section h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-info {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item a {
+            color: #ad083a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .versions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .version-card {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <div class="header">
+            <h1>🌙 Nabatian Restaurant & Catering</h1>
+            <p class="subtitle">am Sonnenbrunnen • Heilbronn-Böckingen</p>
+            <span class="badge">Demo-Versionen – Wählen Sie Ihren Favoriten</span>
+        </div>
+
+        <div class="versions-grid">
+            <!-- Version 1: Classic -->
+            <div class="version-card">
+                <div class="version-icon">🏛️</div>
+                <h2>Version 1: Classic</h2>
+                <div class="price">€500</div>
+                <p style="color: rgba(255,255,255,0.7); margin-bottom: 2rem;">
+                    Genau wie Ihre aktuelle Website – nur besser!
+                </p>
+
+                <div class="features">
+                    <div class="feature-item">Gleicher traditioneller Stil</div>
+                    <div class="feature-item">Burgundy-Farbschema beibehalten</div>
+                    <div class="feature-item">Maven Pro Schriftart</div>
+                    <div class="feature-item">Sauberer, professioneller Code</div>
+                    <div class="feature-item">Mobile-optimiert</div>
+                    <div class="feature-item">6 Hauptseiten</div>
+                    <div class="feature-item">Kontaktformular</div>
+                    <div class="feature-item">HTML/CSS/JavaScript</div>
+                </div>
+
+                <a href="version1-classic/index.html" class="btn" target="_blank">
+                    Classic Version ansehen →
+                </a>
+            </div>
+
+            <!-- Version 2: Premium -->
+            <div class="version-card">
+                <div class="version-icon">✨</div>
+                <h2>Version 2: Premium 3D</h2>
+                <div class="price">€1,000</div>
+                <p style="color: rgba(255,255,255,0.7); margin-bottom: 2rem;">
+                    Moderne Luxus-Version mit 3D-Effekten!
+                </p>
+
+                <div class="features">
+                    <div class="feature-item">Dark Theme mit Burgundy Akzent</div>
+                    <div class="feature-item">3D Parallax Hero-Section</div>
+                    <div class="feature-item">Glassmorphism Design</div>
+                    <div class="feature-item">Interaktive Flip-Karten</div>
+                    <div class="feature-item">Smooth Scroll-Animationen</div>
+                    <div class="feature-item">SEO-optimiert (Schema.org)</div>
+                    <div class="feature-item">Premium Typography (Playfair + Inter)</div>
+                    <div class="feature-item">Luxury Dubai-Restaurant Ästhetik</div>
+                </div>
+
+                <a href="version2-premium/index.html" class="btn" target="_blank">
+                    Premium Version ansehen →
+                </a>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>Beide Versionen sind live und einsatzbereit!</h3>
+            <p>
+                Testen Sie beide Demos in Ruhe. Entscheiden Sie sich für die Version,
+                die am besten zu Ihrem Restaurant passt. Alle Inhalte können noch angepasst werden.
+            </p>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📞</span>
+                    <a href="tel:+4917684512873">+49 176 84512873</a>
+                </div>
+                <div class="contact-item">
+                    <span>✉️</span>
+                    <a href="mailto:nasrin.nabatian@gmail.com">nasrin.nabatian@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

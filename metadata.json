@@ -1,0 +1,47 @@
+{
+  "clientName": "Nabatian Restaurant & Catering am Sonnenbrunnen",
+  "businessType": "Restaurant",
+  "location": "Heilbronn - Böckingen",
+  "airtableRecordId": "recobEAUA2hd48aen",
+  "contact": {
+    "phone": "+49 176 84512873",
+    "email": "nasrin.nabatian@gmail.com",
+    "address": "Im Haselter 9/1, 74080 Heilbronn, Deutschland"
+  },
+  "urls": {
+    "website": "http://www.nabatian.de/",
+    "instagram": "https://www.instagram.com/nabatian_restaurant_catering",
+    "facebook": "https://www.facebook.com/profile.php?id=100045701568663",
+    "linkedin": "https://de.linkedin.com/company/nabatian-cantina-catering",
+    "googleMaps": "https://www.google.com/maps/search/?api=1&query=Nabatian%20Restaurant%20%26%20Catering%20am%20Sonnenbrunnen"
+  },
+  "branding": {
+    "primaryColor": "#711521",
+    "secondaryColor": "#ad083a",
+    "accentColor": "#0e9b01",
+    "neutralDark": "#000000",
+    "neutralLight": "#ffffff",
+    "fonts": {
+      "heading": "Maven Pro",
+      "body": "Maven Pro"
+    },
+    "style": "Traditional Persian meets Modern",
+    "keywords": ["Restaurant Heilbronn", "Persisches Restaurant", "Catering Heilbronn", "Nabatian", "Orient Restaurant"]
+  },
+  "versions": {
+    "version1": {
+      "name": "Classic Refresh",
+      "price": "€500",
+      "tech": "HTML/CSS/JavaScript",
+      "description": "Same style as original, slightly improved"
+    },
+    "version2": {
+      "name": "Premium 3D",
+      "price": "€1000",
+      "tech": "Astro + React + Three.js",
+      "description": "Modern premium version with 3D elements and advanced SEO"
+    }
+  },
+  "consentGiven": true,
+  "createdAt": "2026-03-24"
+}
