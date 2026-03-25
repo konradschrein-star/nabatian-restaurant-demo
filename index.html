@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nabatian Restaurant - Demo Versionen</title>
-    <meta name="description" content="Zwei moderne Website-Versionen für Nabatian Restaurant & Catering - Design 2 (Astro SEO) und Design 3 (Next.js 3D Premium)">
+    <title>Nabatian Restaurant - Demo Versionen | Axtrelis Webdesign</title>
+    <meta name="description" content="Zwei professionelle Website-Versionen - wählen Sie Ihren Favoriten. Beide sind production-ready und können sofort live gehen.">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Roboto + Syne + Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&family=Quattrocento+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -19,20 +19,66 @@
         }
 
         body {
-            font-family: 'Maven Pro', sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            font-family: 'Inter', sans-serif;
+            background: #000000;
             color: #ffffff;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
+            overflow-x: hidden;
+        }
+
+        /* Animated background gradient */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(168, 216, 255, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(168, 216, 255, 0.05) 0%, transparent 50%);
+            animation: gradientShift 15s ease infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
         }
 
         .container {
-            max-width: 1200px;
-            width: 100%;
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Axtrelis Badge */
+        .axtrelis-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.625rem 1.25rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(168, 216, 255, 0.2);
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #a8d8ff;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .axtrelis-badge:hover {
+            border-color: #a8d8ff;
+            box-shadow: 0 0 20px rgba(168, 216, 255, 0.3);
+        }
+
+        .axtrelis-badge svg {
+            width: 16px;
+            height: 16px;
         }
 
         header {
@@ -40,242 +86,378 @@
             margin-bottom: 4rem;
         }
 
-        .logo {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 2rem;
-            background: #711521;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            box-shadow: 0 0 40px rgba(113, 21, 33, 0.5);
-        }
-
         h1 {
-            font-family: 'Quattrocento Sans', sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
+            font-family: 'Roboto', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #711521 0%, #ad083a 100%);
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #ffffff 0%, #a8d8ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            animation: fadeInUp 0.8s ease;
         }
 
         .subtitle {
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             color: #9ca3af;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
         }
 
-        .client-info {
+        .intro-text {
+            max-width: 700px;
+            margin: 0 auto;
             font-size: 1rem;
+            line-height: 1.6;
             color: #6b7280;
-            margin-top: 1rem;
+            animation: fadeInUp 0.8s ease 0.4s backwards;
         }
 
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Versions Grid */
         .versions {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2.5rem;
+            margin: 4rem 0;
         }
 
+        @media (max-width: 768px) {
+            .versions {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Version Card */
         .version-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid rgba(113, 21, 33, 0.3);
-            border-radius: 16px;
-            padding: 2.5rem;
-            transition: all 0.3s ease;
             position: relative;
-            overflow: hidden;
+            background: rgba(10, 10, 10, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeInUp 0.8s ease backwards;
+        }
+
+        .version-card:nth-child(1) {
+            animation-delay: 0.6s;
+        }
+
+        .version-card:nth-child(2) {
+            animation-delay: 0.8s;
         }
 
         .version-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #711521 0%, #ad083a 100%);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
+            inset: 0;
+            border-radius: 24px;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(168, 216, 255, 0.2), transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
 
         .version-card:hover {
-            border-color: #711521;
             transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(113, 21, 33, 0.3);
+            border-color: rgba(168, 216, 255, 0.3);
+            box-shadow: 0 20px 60px rgba(168, 216, 255, 0.15),
+                        0 0 0 1px rgba(168, 216, 255, 0.1);
         }
 
         .version-card:hover::before {
-            transform: scaleX(1);
+            opacity: 1;
         }
 
-        .version-badge {
-            display: inline-block;
-            background: #711521;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
+        /* Icon */
+        .version-icon {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(168, 216, 255, 0.08);
+            border: 1px solid rgba(168, 216, 255, 0.2);
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            transition: all 0.3s ease;
         }
 
-        .version-card.premium .version-badge {
-            background: linear-gradient(135deg, #711521 0%, #ad083a 100%);
+        .version-card:hover .version-icon {
+            background: rgba(168, 216, 255, 0.15);
+            border-color: #a8d8ff;
+            transform: scale(1.1) rotateY(180deg);
+            box-shadow: 0 0 30px rgba(168, 216, 255, 0.3);
         }
 
         .version-title {
-            font-family: 'Quattrocento Sans', sans-serif;
+            font-family: 'Roboto', sans-serif;
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
             color: #ffffff;
         }
 
-        .version-price {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #711521;
-            margin-bottom: 1rem;
-        }
-
-        .version-card.premium .version-price {
-            background: linear-gradient(135deg, #711521 0%, #ad083a 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .version-description {
-            color: #9ca3af;
+        .version-subtitle {
+            font-size: 0.875rem;
+            color: #6b7280;
             margin-bottom: 1.5rem;
-            line-height: 1.6;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
 
+        .version-price {
+            font-family: 'Roboto', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #a8d8ff;
+            margin-bottom: 1.5rem;
+            line-height: 1;
+            text-shadow: 0 0 30px rgba(168, 216, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .version-card:hover .version-price {
+            text-shadow: 0 0 50px rgba(168, 216, 255, 0.6);
+        }
+
+        /* Features List */
         .features {
             list-style: none;
             margin-bottom: 2rem;
         }
 
         .features li {
-            padding: 0.5rem 0;
+            padding: 0.75rem 0;
             color: #d1d5db;
             display: flex;
             align-items: start;
+            gap: 0.75rem;
+            font-size: 0.9375rem;
+            line-height: 1.5;
+            transition: all 0.3s ease;
+        }
+
+        .features li:hover {
+            color: #ffffff;
+            transform: translateX(4px);
         }
 
         .features li::before {
             content: '✓';
-            color: #711521;
-            font-weight: bold;
-            margin-right: 0.75rem;
-            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 20px;
+            height: 20px;
+            color: #a8d8ff;
+            font-weight: 700;
+            font-size: 0.875rem;
+            border: 1px solid rgba(168, 216, 255, 0.3);
+            border-radius: 50%;
+            margin-top: 2px;
         }
 
+        /* CTA Button */
         .cta-button {
             display: block;
             width: 100%;
-            padding: 1rem 2rem;
-            background: #711521;
-            color: white;
+            padding: 1.125rem 2rem;
+            background: #ffffff;
+            color: #000000;
             text-align: center;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 12px;
             font-weight: 600;
-            font-size: 1.125rem;
-            transition: all 0.3s ease;
-            border: 2px solid #711521;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(168, 216, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
         }
 
         .cta-button:hover {
-            background: #6B1C1C;
-            border-color: #ad083a;
             transform: scale(1.02);
-            box-shadow: 0 8px 24px rgba(113, 21, 33, 0.4);
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+            border-color: #a8d8ff;
         }
 
-        .version-card.premium .cta-button {
-            background: linear-gradient(135deg, #711521 0%, #ad083a 100%);
-            border: 2px solid #ad083a;
+        .cta-button span {
+            position: relative;
+            z-index: 1;
         }
 
-        .version-card.premium .cta-button:hover {
-            box-shadow: 0 8px 24px rgba(173, 8, 58, 0.5);
+        /* Info Section */
+        .info-section {
+            max-width: 900px;
+            margin: 5rem auto 3rem;
+            padding: 2.5rem;
+            background: rgba(10, 10, 10, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            text-align: center;
+            animation: fadeInUp 1s ease 1s backwards;
         }
 
-        .tech-stack {
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.875rem;
-            color: #6b7280;
+        .info-section h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
         }
 
+        .info-section p {
+            color: #9ca3af;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding: 1.5rem;
+            background: rgba(168, 216, 255, 0.05);
+            border: 1px solid rgba(168, 216, 255, 0.1);
+            border-radius: 12px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #d1d5db;
+            font-size: 0.9375rem;
+        }
+
+        .contact-item svg {
+            width: 18px;
+            height: 18px;
+            color: #a8d8ff;
+        }
+
+        .contact-item a {
+            color: #a8d8ff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(168, 216, 255, 0.5);
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem 0 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            animation: fadeInUp 1s ease 1.2s backwards;
         }
 
-        .footer-info {
-            color: #6b7280;
+        .axtrelis-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Syne', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .axtrelis-logo:hover {
+            color: #a8d8ff;
+            text-shadow: 0 0 20px rgba(168, 216, 255, 0.5);
+        }
+
+        .axtrelis-logo svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer-tagline {
             font-size: 0.875rem;
-            margin-bottom: 1rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
         }
 
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-
-        .footer-links a {
+        .footer-link {
+            font-size: 0.875rem;
             color: #9ca3af;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
-        .footer-links a:hover {
-            color: #711521;
+        .footer-link:hover {
+            color: #a8d8ff;
         }
 
-        .axtrelis-credit {
-            margin-top: 2rem;
-            color: #6b7280;
-            font-size: 0.875rem;
-        }
-
-        .axtrelis-credit a {
-            color: #711521;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .axtrelis-credit a:hover {
-            color: #ad083a;
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
+            .container {
+                padding: 2rem 1.5rem;
             }
 
-            .versions {
-                grid-template-columns: 1fr;
+            h1 {
+                font-size: 2.5rem;
             }
 
             .version-card {
-                padding: 1.5rem;
+                padding: 2rem;
+            }
+
+            .version-price {
+                font-size: 2.5rem;
+            }
+
+            .info-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
             }
         }
     </style>
@@ -283,86 +465,113 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo">🍽️</div>
-            <h1>NABATIAN RESTAURANT</h1>
-            <p class="subtitle">Persisches Restaurant & Catering am Sonnenbrunnen</p>
-            <p class="client-info">📍 Im Haselter 9/1, 74080 Heilbronn | ☎ +49 176 84512873</p>
+            <div class="axtrelis-badge">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                Axtrelis Webdesign
+            </div>
+
+            <h1>Nabatian Restaurant</h1>
+            <p class="subtitle">Demo-Versionen · Heilbronn-Böckingen</p>
+            <p class="intro-text">
+                Zwei professionelle Website-Versionen – wählen Sie Ihren Favoriten. Beide sind
+                production-ready und können sofort live gehen.
+            </p>
         </header>
 
         <main>
             <div class="versions">
-                <!-- Design 2 - Astro -->
+                <!-- Classic Version -->
                 <div class="version-card">
-                    <span class="version-badge">DESIGN 2 - SEO BEAST</span>
-                    <h2 class="version-title">Astro Version</h2>
-                    <p class="version-price">€1.500 - €3.000</p>
-                    <p class="version-description">
-                        Production-ready, SEO-optimierte Website mit perfekter Performance.
-                        Ideal für maximale Google-Rankings und schnelle Ladezeiten.
-                    </p>
+                    <div class="version-icon">🏛️</div>
+                    <h2 class="version-title">Classic</h2>
+                    <p class="version-subtitle">Traditional Persian Style</p>
+                    <div class="version-price">€500</div>
 
                     <ul class="features">
-                        <li>7 vollständige Seiten (komplett fertig)</li>
-                        <li>100/100 Lighthouse Score möglich</li>
-                        <li>Sitemap + Schema.org SEO</li>
-                        <li>Sanity CMS vorbereitet</li>
-                        <li>Mobile-responsive Design</li>
-                        <li>Burgundy Branding (#711521)</li>
+                        <li>Identischer Stil wie Original</li>
+                        <li>Burgundy Farbschema</li>
+                        <li>Maven Pro Typography</li>
+                        <li>Clean, professional Code</li>
+                        <li>Fully responsive</li>
+                        <li>6 Hauptseiten</li>
+                        <li>Kontaktformular</li>
+                        <li>SEO-optimiert</li>
                     </ul>
 
-                    <a href="./design2/" class="cta-button">DESIGN 2 ANSEHEN →</a>
-
-                    <div class="tech-stack">
-                        <strong>Tech Stack:</strong> Astro 6.0.8, React Islands, Tailwind CSS 4.2.2
-                    </div>
+                    <a href="./design2/" class="cta-button">
+                        <span>Classic Version ansehen</span>
+                    </a>
                 </div>
 
-                <!-- Design 3 - Next.js Premium -->
-                <div class="version-card premium">
-                    <span class="version-badge">DESIGN 3 - PREMIUM 3D</span>
-                    <h2 class="version-title">Next.js 3D Version</h2>
-                    <p class="version-price">€3.000 - €5.000+</p>
-                    <p class="version-description">
-                        Premium-Website mit 3D-Animationen und Wow-Faktor.
-                        Perfekt für starken ersten Eindruck und moderne User Experience.
-                    </p>
+                <!-- Premium Version -->
+                <div class="version-card">
+                    <div class="version-icon">⭐</div>
+                    <h2 class="version-title">Premium</h2>
+                    <p class="version-subtitle">Modern Luxury Design</p>
+                    <div class="version-price">€1,000</div>
 
                     <ul class="features">
-                        <li>3D Hero mit rotierendem Logo</li>
-                        <li>Smooth Scroll (Lenis)</li>
-                        <li>Framer Motion Animationen</li>
-                        <li>3D-Tilt Hover Effects</li>
-                        <li>Gleiche Burgundy-Branding</li>
-                        <li>⚠️ Homepage fertig (weitere Seiten folgen)</li>
+                        <li>Dark luxury theme</li>
+                        <li>3D parallax effects</li>
+                        <li>Glassmorphism design</li>
+                        <li>Interactive flip cards</li>
+                        <li>Smooth scroll animations</li>
+                        <li>Advanced SEO (Schema.org)</li>
+                        <li>Premium typography</li>
+                        <li>Dubai restaurant aesthetic</li>
                     </ul>
 
-                    <a href="./design3/" class="cta-button">DESIGN 3 ANSEHEN →</a>
-
-                    <div class="tech-stack">
-                        <strong>Tech Stack:</strong> Next.js 16.2.1, React Three Fiber, Framer Motion, Lenis
-                    </div>
+                    <a href="./design3/" class="cta-button">
+                        <span>Premium Version ansehen</span>
+                    </a>
                 </div>
             </div>
         </main>
 
+        <section class="info-section">
+            <h2>Beide Versionen sind einsatzbereit</h2>
+            <p>
+                Testen Sie beide Demos in Ruhe. Entscheiden Sie sich für die Version, die am besten zu
+                Ihrem Restaurant passt. Alle Inhalte und Texte können noch individuell angepasst werden.
+            </p>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Konrad Schreiner
+                </div>
+
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <a href="tel:+4915785471426">+49 157 85471426</a>
+                </div>
+
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <a href="mailto:konrad.schrein@gmail.com">konrad.schrein@gmail.com</a>
+                </div>
+            </div>
+        </section>
+
         <footer>
-            <div class="footer-info">
-                <strong>Nabatian Restaurant & Catering am Sonnenbrunnen</strong><br>
-                Authentische persische Küche in Heilbronn seit 2021
+            <div class="axtrelis-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                Axtrelis
             </div>
-
-            <div class="footer-links">
-                <a href="https://www.instagram.com/nabatian_restaurant_catering" target="_blank">Instagram</a>
-                <a href="https://www.facebook.com/profile.php?id=100045701568663" target="_blank">Facebook</a>
-                <a href="https://de.linkedin.com/company/nabatian-cantina-catering" target="_blank">LinkedIn</a>
-                <a href="mailto:nasrin.nabatian@gmail.com">E-Mail</a>
-            </div>
-
-            <div class="axtrelis-credit">
-                Webdesign by <a href="https://axtrelis.com" target="_blank">Axtrelis</a> |
-                Kontakt: <a href="mailto:konrad.schrein@gmail.com">konrad.schrein@gmail.com</a> |
-                <a href="tel:+4915785471426">+49 157 85471426</a>
-            </div>
+            <p class="footer-tagline">Mehr Website. Weniger Agentur.</p>
+            <a href="https://axtrelis.com" target="_blank" class="footer-link">axtrelis.com</a>
         </footer>
     </div>
 </body>
