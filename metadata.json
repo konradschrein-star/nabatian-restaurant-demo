@@ -17,29 +17,45 @@
   },
   "branding": {
     "primaryColor": "#711521",
+    "primaryDark": "#6B1C1C",
     "secondaryColor": "#ad083a",
-    "accentColor": "#0e9b01",
+    "accentColor": "#D82B2B",
+    "topBarGreen": "#0e9b01",
     "neutralDark": "#000000",
     "neutralLight": "#ffffff",
+    "textSecondary": "#939393",
     "fonts": {
-      "heading": "Maven Pro",
+      "heading": "Quattrocento Sans",
+      "headingAlt": "Maven Pro",
       "body": "Maven Pro"
     },
-    "style": "Traditional Persian meets Modern",
-    "keywords": ["Restaurant Heilbronn", "Persisches Restaurant", "Catering Heilbronn", "Nabatian", "Orient Restaurant"]
+    "style": "Classic Restaurant - Burgundy/Wine Red Theme",
+    "keywords": ["Restaurant Heilbronn", "Persisches Restaurant", "Catering Heilbronn", "Nabatian", "Orient Restaurant"],
+    "buildMode": "redesign",
+    "preserveStyle": true,
+    "notes": "Customer wants SAME style, just modernized tech stack"
   },
   "versions": {
-    "version1": {
-      "name": "Classic Refresh",
-      "price": "€500",
-      "tech": "HTML/CSS/JavaScript",
-      "description": "Same style as original, slightly improved"
+    "design1": {
+      "name": "Budget Tier",
+      "price": "€500-1000",
+      "tech": "Vanilla HTML/CSS/JavaScript",
+      "description": "Basic responsive website, 5-6 pages, same style"
     },
-    "version2": {
-      "name": "Premium 3D",
-      "price": "€1000",
-      "tech": "Astro + React + Three.js",
-      "description": "Modern premium version with 3D elements and advanced SEO"
+    "design2": {
+      "name": "Medium Tier - SEO Beast",
+      "price": "€1500-3000",
+      "tech": "Astro + React Islands + Tailwind CSS",
+      "description": "SAME STYLE as original, modern tech, perfect SEO, 6-8 pages, premium UX",
+      "seo": "Perfect for local search - Astro = SEO-optimized out of the box",
+      "cms": "Sanity.io or Decap CMS for self-service updates",
+      "target": "MOST COMMON SALE - Growing businesses, professional image"
+    },
+    "design3": {
+      "name": "Premium Tier",
+      "price": "€3000-5000+",
+      "tech": "Next.js 15 (App Router) + React Server Components",
+      "description": "Cutting-edge, 8+ pages, custom 3D, animations, enterprise-ready"
     }
   },
   "consentGiven": true,

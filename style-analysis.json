@@ -1,0 +1,89 @@
+{
+  "colors": {
+    "primary": "#711521",
+    "primaryDark": "#6B1C1C",
+    "secondary": "#ad083a",
+    "accent": "#D82B2B",
+    "background": "#FFFFFF",
+    "backgroundDark": "#000000",
+    "text": "#000000",
+    "textSecondary": "#939393",
+    "textLight": "#7A7A7A",
+    "topBarGreen": "#0e9b01",
+    "topBarRed": "#bc0f0f"
+  },
+  "typography": {
+    "headingFont": "Quattrocento Sans",
+    "bodyFont": "Maven Pro",
+    "altFont": "Roboto",
+    "serifFont": "Roboto Slab",
+    "headingSizes": {
+      "h1": "23px",
+      "h2": "20px",
+      "h3": "18px",
+      "h4": "17px",
+      "heroTitle": "48px",
+      "singlePostTitle": "34px"
+    },
+    "bodySize": "14px",
+    "lineHeight": "1.8",
+    "headingLineHeight": "1.4",
+    "letterSpacing": {
+      "heading": "4px",
+      "menu": "1.5px",
+      "small": "0.6px"
+    },
+    "fontWeights": {
+      "heading": "500",
+      "body": "400",
+      "button": "500"
+    }
+  },
+  "spacing": {
+    "sectionPadding": "75px 0 100px 0",
+    "heroPadding": "250px 0 350px 0",
+    "containerPadding": "20px",
+    "widgetSpacing": "20px",
+    "buttonMargin": "90px 0 -130px 0",
+    "spacer": "30px"
+  },
+  "borderRadius": {
+    "buttons": "0px",
+    "inputs": "3px",
+    "sections": "0px"
+  },
+  "effects": {
+    "backgroundOverlay": "rgba(0,0,0,0.6)",
+    "transition": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s",
+    "menuHoverEffect": "effect-seven"
+  },
+  "layout": {
+    "contentWidth": "71%",
+    "containerMaxWidth": "1140px",
+    "menuItemPadding": "0 23px",
+    "dropdownMinWidth": "189px"
+  },
+  "designNotes": {
+    "style": "Classic Restaurant",
+    "primaryColor": "Burgundy/Wine Red (#711521)",
+    "secondaryColor": "Deep Red (#ad083a)",
+    "theme": "Dark elegant with white background",
+    "brandIdentity": "Traditional Persian restaurant",
+    "keyFeatures": [
+      "Hero with dark overlay (60% black)",
+      "White text on dark background for hero",
+      "Burgundy accent for all interactive elements",
+      "Maven Pro font throughout (modern sans-serif)",
+      "Quattrocento Sans for hero titles (elegant)",
+      "Black footer with gray text",
+      "Green top bar for reservations (#0e9b01)"
+    ],
+    "mustPreserve": [
+      "Burgundy color (#711521) - Customer's brand color",
+      "Maven Pro font - Consistent throughout site",
+      "Dark hero with overlay effect",
+      "Green top bar for contact info",
+      "Black footer design"
+    ]
+  }
+}

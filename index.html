@@ -49,21 +49,31 @@
         .axtrelis-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1.5rem;
+            gap: 0.75rem;
+            padding: 0.75rem 1.75rem;
             background: var(--dark-elevated);
-            border: 1px solid rgba(168, 216, 255, 0.2);
+            border: 1px solid rgba(168, 216, 255, 0.3);
             border-radius: 50px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             margin-bottom: 2rem;
             font-weight: 600;
             letter-spacing: 0.5px;
-            box-shadow: 0 0 20px rgba(168, 216, 255, 0.1);
+            box-shadow: 0 0 20px rgba(168, 216, 255, 0.15);
+            text-decoration: none;
+            color: var(--white);
+            transition: all 0.3s ease;
         }
 
-        .axtrelis-badge::before {
-            content: '⚡';
-            font-size: 1.2rem;
+        .axtrelis-badge:hover {
+            background: rgba(168, 216, 255, 0.1);
+            border-color: var(--blue-glow);
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(168, 216, 255, 0.3);
+        }
+
+        .axtrelis-icon {
+            width: 20px;
+            height: 20px;
         }
 
         .header h1 {
@@ -133,9 +143,20 @@
         }
 
         .version-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(168, 216, 255, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(168, 216, 255, 0.2);
+        }
+
+        .version-icon svg {
+            width: 48px;
+            height: 48px;
         }
 
         .version-card h2 {
@@ -176,12 +197,14 @@
         }
 
         .feature-item::before {
-            content: '→';
-            color: var(--blue-glow);
-            font-weight: bold;
-            font-size: 1rem;
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--blue-glow);
+            border-radius: 50%;
             flex-shrink: 0;
-            margin-top: 0.1rem;
+            margin-top: 0.6rem;
+            box-shadow: 0 0 8px var(--blue-glow);
         }
 
         .btn {
@@ -248,7 +271,8 @@
         }
 
         .contact-icon {
-            font-size: 1.5rem;
+            width: 20px;
+            height: 20px;
         }
 
         .contact-item a {
@@ -273,16 +297,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
             margin-bottom: 1rem;
             font-family: 'Syne', sans-serif;
             font-weight: 700;
             font-size: 1.1rem;
         }
 
-        .footer-brand::before {
-            content: '⚡';
-            color: var(--blue-glow);
+        .footer-icon {
+            width: 24px;
+            height: 24px;
         }
 
         .footer p {
@@ -324,7 +348,6 @@
             }
         }
 
-        /* Glow effect animation */
         @keyframes glow {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.5; }
@@ -338,9 +361,12 @@
 <body>
     <div class="preview-container">
         <div class="header">
-            <div class="axtrelis-badge">
-                Axtrelis Webdesign
-            </div>
+            <a href="https://axtrelis.com" target="_blank" class="axtrelis-badge">
+                <svg class="axtrelis-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" fill="currentColor" stroke="var(--blue-glow)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Axtrelis Webdesign</span>
+            </a>
             <h1>Nabatian Restaurant</h1>
             <p class="subtitle">Demo-Versionen · Heilbronn-Böckingen</p>
             <p class="description">
@@ -353,7 +379,15 @@
             <!-- Version 1: Classic -->
             <div class="version-card">
                 <div class="version-header">
-                    <div class="version-icon">🏛️</div>
+                    <div class="version-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="9" width="18" height="12" rx="1" stroke="var(--blue-glow)" stroke-width="1.5"/>
+                            <path d="M3 9L12 3L21 9" stroke="var(--blue-glow)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="7" y1="13" x2="7" y2="17" stroke="var(--blue-glow)" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="12" y1="13" x2="12" y2="17" stroke="var(--blue-glow)" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="17" y1="13" x2="17" y2="17" stroke="var(--blue-glow)" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h2>Classic</h2>
                     <p class="version-subtitle">Traditional Persian Style</p>
                 </div>
@@ -371,7 +405,7 @@
                     <div class="feature-item">SEO-optimiert</div>
                 </div>
 
-                <a href="version1-classic/index.html" class="btn" target="_blank">
+                <a href="classic/index.html" class="btn" target="_blank">
                     Classic Version ansehen
                 </a>
             </div>
@@ -379,7 +413,12 @@
             <!-- Version 2: Premium -->
             <div class="version-card">
                 <div class="version-header">
-                    <div class="version-icon">✨</div>
+                    <div class="version-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="var(--blue-glow)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="12" r="3" fill="var(--blue-glow)" opacity="0.3"/>
+                        </svg>
+                    </div>
                     <h2>Premium</h2>
                     <p class="version-subtitle">Modern Luxury Design</p>
                 </div>
@@ -397,7 +436,7 @@
                     <div class="feature-item">Dubai restaurant aesthetic</div>
                 </div>
 
-                <a href="version2-premium/index.html" class="btn" target="_blank">
+                <a href="premium/index.html" class="btn" target="_blank">
                     Premium Version ansehen
                 </a>
             </div>
@@ -413,15 +452,23 @@
 
             <div class="contact-info">
                 <div class="contact-item">
-                    <span class="contact-icon">👤</span>
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="var(--blue-glow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="12" cy="7" r="4" stroke="var(--blue-glow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                     <span>Konrad Schreiner</span>
                 </div>
                 <div class="contact-item">
-                    <span class="contact-icon">📞</span>
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="var(--blue-glow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                     <a href="tel:+4915785471426">+49 157 85471426</a>
                 </div>
                 <div class="contact-item">
-                    <span class="contact-icon">✉️</span>
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="var(--blue-glow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <polyline points="22,6 12,13 2,6" stroke="var(--blue-glow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                     <a href="mailto:konrad.schrein@gmail.com">konrad.schrein@gmail.com</a>
                 </div>
             </div>
@@ -429,6 +476,9 @@
 
         <div class="footer">
             <div class="footer-brand">
+                <svg class="footer-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" fill="var(--blue-glow)" stroke="var(--blue-glow)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
                 <span>Axtrelis</span>
             </div>
             <p>Mehr Website. Weniger Agentur.</p>

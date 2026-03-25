@@ -1,0 +1,127 @@
+{
+  "source": "Extracted from Nabatian.de CSS files (Elementor + OceanWP)",
+  "mode": "redesign",
+  "comment": "Style-preserving redesign - keep original brand colors and fonts",
+
+  "colors": {
+    "primary": "#6B1C1C",
+    "primaryName": "Dunkelrot / Burgundy",
+    "primaryUsage": "Buttons (hover), primary CTAs, brand accent",
+
+    "accent": "#D82B2B",
+    "accentName": "Hellrot / Bright Red",
+    "accentUsage": "Quote marks, highlights, decorative elements",
+
+    "secondary": "#6EC1E4",
+    "secondaryName": "Light Blue",
+    "secondaryUsage": "Elementor kit primary (less used on actual page)",
+
+    "background": "#FFFFFF",
+    "backgroundName": "White",
+
+    "surface": "#F5F5F5",
+    "surfaceName": "Light Gray (added for variation)",
+
+    "text": "#7A7A7A",
+    "textName": "Medium Gray",
+    "textUsage": "Body text (Elementor kit)",
+
+    "textDark": "#54595F",
+    "textDarkName": "Dark Gray",
+    "textDarkUsage": "Headings, secondary text",
+
+    "textLight": "#FFFFFF",
+    "textLightName": "White",
+    "textLightUsage": "Hero text on dark background",
+
+    "overlay": "#000000",
+    "overlayName": "Black",
+    "overlayUsage": "Hero background overlay (60% opacity)"
+  },
+
+  "typography": {
+    "hero": {
+      "family": "Quattrocento Sans",
+      "fallback": "Sans-serif",
+      "size": "48px",
+      "weight": "500",
+      "letterSpacing": "4px",
+      "usage": "Hero section main heading"
+    },
+
+    "heading": {
+      "family": "Maven Pro",
+      "fallback": "Sans-serif",
+      "size": "30px",
+      "weight": "500",
+      "usage": "Section headings (h2, h3)"
+    },
+
+    "body": {
+      "family": "Maven Pro",
+      "fallback": "Sans-serif",
+      "size": "16px",
+      "weight": "400",
+      "usage": "Body text, paragraphs"
+    },
+
+    "button": {
+      "family": "Maven Pro",
+      "fallback": "Sans-serif",
+      "size": "20px",
+      "weight": "500",
+      "usage": "Button text"
+    },
+
+    "alternative": {
+      "primary": "Roboto",
+      "secondary": "Roboto Slab",
+      "note": "Used in Elementor kit but less prominent on actual page"
+    }
+  },
+
+  "spacing": {
+    "hero": {
+      "paddingTop": "250px",
+      "paddingBottom": "350px",
+      "marginTop": "-30px"
+    },
+
+    "section": {
+      "padding": "80px",
+      "verticalSpacing": "30px"
+    },
+
+    "widget": {
+      "spacing": "20px",
+      "marginBottom": "20px"
+    },
+
+    "container": {
+      "maxWidth": "1140px",
+      "maxWidthTablet": "1024px",
+      "maxWidthMobile": "767px"
+    }
+  },
+
+  "effects": {
+    "transitions": "background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s",
+    "heroOverlayOpacity": 0.6,
+    "borderRadius": "0px",
+    "buttonHoverColor": "#6B1C1C"
+  },
+
+  "assets": {
+    "logo": "https://nabatian.de/wp-content/uploads/2021/04/cropped-cropped-Nabatian_Logo.png",
+    "heroImage": "https://nabatian.de/wp-content/uploads/2021/04/Persisches-Buffet-scaled.jpg",
+    "favicon": "https://nabatian.de/wp-content/uploads/2021/04/cropped-Nabatian_Logo.png"
+  },
+
+  "branding": {
+    "businessName": "NABATIAN Restaurant & Catering",
+    "tagline": "Persisches Restaurant und Catering in Heilbronn",
+    "industry": "Restaurant / Catering / Persische Küche",
+    "location": "Heilbronn, Deutschland",
+    "vibe": "Elegant, warm, traditional Persian, upscale dining"
+  }
+}
