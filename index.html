@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nabatian Restaurant - Demo Versionen</title>
+    <meta name="description" content="Zwei moderne Website-Versionen für Nabatian Restaurant & Catering - Design 2 (Astro SEO) und Design 3 (Next.js 3D Premium)">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&family=Quattrocento+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Maven Pro', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            background: #711521;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            box-shadow: 0 0 40px rgba(113, 21, 33, 0.5);
+        }
+
+        h1 {
+            font-family: 'Quattrocento Sans', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #711521 0%, #ad083a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .client-info {
+            font-size: 1rem;
+            color: #6b7280;
+            margin-top: 1rem;
+        }
+
+        .versions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .version-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(113, 21, 33, 0.3);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .version-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #711521 0%, #ad083a 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .version-card:hover {
+            border-color: #711521;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(113, 21, 33, 0.3);
+        }
+
+        .version-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .version-badge {
+            display: inline-block;
+            background: #711521;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .version-card.premium .version-badge {
+            background: linear-gradient(135deg, #711521 0%, #ad083a 100%);
+        }
+
+        .version-title {
+            font-family: 'Quattrocento Sans', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .version-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #711521;
+            margin-bottom: 1rem;
+        }
+
+        .version-card.premium .version-price {
+            background: linear-gradient(135deg, #711521 0%, #ad083a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .version-description {
+            color: #9ca3af;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .features li {
+            padding: 0.5rem 0;
+            color: #d1d5db;
+            display: flex;
+            align-items: start;
+        }
+
+        .features li::before {
+            content: '✓';
+            color: #711521;
+            font-weight: bold;
+            margin-right: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: #711521;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            border: 2px solid #711521;
+        }
+
+        .cta-button:hover {
+            background: #6B1C1C;
+            border-color: #ad083a;
+            transform: scale(1.02);
+            box-shadow: 0 8px 24px rgba(113, 21, 33, 0.4);
+        }
+
+        .version-card.premium .cta-button {
+            background: linear-gradient(135deg, #711521 0%, #ad083a 100%);
+            border: 2px solid #ad083a;
+        }
+
+        .version-card.premium .cta-button:hover {
+            box-shadow: 0 8px 24px rgba(173, 8, 58, 0.5);
+        }
+
+        .tech-stack {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-info {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #711521;
+        }
+
+        .axtrelis-credit {
+            margin-top: 2rem;
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .axtrelis-credit a {
+            color: #711521;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .axtrelis-credit a:hover {
+            color: #ad083a;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .versions {
+                grid-template-columns: 1fr;
+            }
+
+            .version-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🍽️</div>
+            <h1>NABATIAN RESTAURANT</h1>
+            <p class="subtitle">Persisches Restaurant & Catering am Sonnenbrunnen</p>
+            <p class="client-info">📍 Im Haselter 9/1, 74080 Heilbronn | ☎ +49 176 84512873</p>
+        </header>
+
+        <main>
+            <div class="versions">
+                <!-- Design 2 - Astro -->
+                <div class="version-card">
+                    <span class="version-badge">DESIGN 2 - SEO BEAST</span>
+                    <h2 class="version-title">Astro Version</h2>
+                    <p class="version-price">€1.500 - €3.000</p>
+                    <p class="version-description">
+                        Production-ready, SEO-optimierte Website mit perfekter Performance.
+                        Ideal für maximale Google-Rankings und schnelle Ladezeiten.
+                    </p>
+
+                    <ul class="features">
+                        <li>7 vollständige Seiten (komplett fertig)</li>
+                        <li>100/100 Lighthouse Score möglich</li>
+                        <li>Sitemap + Schema.org SEO</li>
+                        <li>Sanity CMS vorbereitet</li>
+                        <li>Mobile-responsive Design</li>
+                        <li>Burgundy Branding (#711521)</li>
+                    </ul>
+
+                    <a href="./design2/" class="cta-button">DESIGN 2 ANSEHEN →</a>
+
+                    <div class="tech-stack">
+                        <strong>Tech Stack:</strong> Astro 6.0.8, React Islands, Tailwind CSS 4.2.2
+                    </div>
+                </div>
+
+                <!-- Design 3 - Next.js Premium -->
+                <div class="version-card premium">
+                    <span class="version-badge">DESIGN 3 - PREMIUM 3D</span>
+                    <h2 class="version-title">Next.js 3D Version</h2>
+                    <p class="version-price">€3.000 - €5.000+</p>
+                    <p class="version-description">
+                        Premium-Website mit 3D-Animationen und Wow-Faktor.
+                        Perfekt für starken ersten Eindruck und moderne User Experience.
+                    </p>
+
+                    <ul class="features">
+                        <li>3D Hero mit rotierendem Logo</li>
+                        <li>Smooth Scroll (Lenis)</li>
+                        <li>Framer Motion Animationen</li>
+                        <li>3D-Tilt Hover Effects</li>
+                        <li>Gleiche Burgundy-Branding</li>
+                        <li>⚠️ Homepage fertig (weitere Seiten folgen)</li>
+                    </ul>
+
+                    <a href="./design3/" class="cta-button">DESIGN 3 ANSEHEN →</a>
+
+                    <div class="tech-stack">
+                        <strong>Tech Stack:</strong> Next.js 16.2.1, React Three Fiber, Framer Motion, Lenis
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-info">
+                <strong>Nabatian Restaurant & Catering am Sonnenbrunnen</strong><br>
+                Authentische persische Küche in Heilbronn seit 2021
+            </div>
+
+            <div class="footer-links">
+                <a href="https://www.instagram.com/nabatian_restaurant_catering" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=100045701568663" target="_blank">Facebook</a>
+                <a href="https://de.linkedin.com/company/nabatian-cantina-catering" target="_blank">LinkedIn</a>
+                <a href="mailto:nasrin.nabatian@gmail.com">E-Mail</a>
+            </div>
+
+            <div class="axtrelis-credit">
+                Webdesign by <a href="https://axtrelis.com" target="_blank">Axtrelis</a> |
+                Kontakt: <a href="mailto:konrad.schrein@gmail.com">konrad.schrein@gmail.com</a> |
+                <a href="tel:+4915785471426">+49 157 85471426</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
