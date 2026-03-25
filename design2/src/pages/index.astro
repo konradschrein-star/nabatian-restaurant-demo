@@ -1,0 +1,134 @@
+---
+import '../styles/global.css';
+
+const title = "Persisches Restaurant | Nabatian";
+const description = "Authentische persische Küche in Heilbronn. NABATIAN Restaurant & Catering am Sonnenbrunnen.";
+---
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+
+    <!-- SEO -->
+    <meta property="og:title" content={title}>
+    <meta property="og:image" content="/images/hero-buffet.jpg">
+    <link rel="canonical" href="https://nabatian.de/">
+    <link rel="icon" href="/images/cropped-Nabatian_Logo.png">
+</head>
+<body class="bg-white text-black">
+
+    <!-- Top Bar -->
+    <div class="border-b bg-white">
+        <div class="max-w-[1200px] mx-auto px-5 py-1.5 text-center">
+            <span class="text-topbar-green text-xs">
+                Reservierungen unter: E-Mail: nasrin.nabatian@gmail.com
+            </span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white border-b shadow-sm">
+        <div class="max-w-[1200px] mx-auto px-5">
+            <div class="text-center py-5">
+                <a href="/">
+                    <img src="/images/cropped-Nabatian_Logo.png" alt="Nabatian" class="max-w-[200px] max-h-[200px] mx-auto" />
+                </a>
+            </div>
+
+            <nav class="text-center pb-2.5">
+                <ul class="inline-flex gap-0 flex-wrap justify-center">
+                    <li><a href="#abholservice" class="block px-6 text-sm tracking-widest text-black hover:text-wine">ABHOL- UND LIEFERSERVICE</a></li>
+                    <li><a href="#restaurant" class="block px-6 text-sm tracking-widest text-black hover:text-wine">RESTAURANT</a></li>
+                    <li><a href="#kontakt" class="block px-6 text-sm tracking-widest text-black hover:text-wine">KONTAKT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative min-h-[600px] flex items-center justify-center">
+        <div class="absolute inset-0">
+            <img src="/images/hero-buffet.jpg" alt="Buffet" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/50"></div>
+        </div>
+
+        <div class="relative z-10 max-w-[1200px] mx-auto px-5 py-20 text-center text-white">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 uppercase">NABATIAN</h1>
+            <p class="text-xl md:text-2xl mb-8">Persisches Restaurant & Catering</p>
+            <p class="text-lg">Am Sonnenbrunnen in Böckingen</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-16">
+        <div class="max-w-[1200px] mx-auto px-5">
+            <h2 class="text-3xl font-bold text-center mb-12 uppercase">PERSISCHES RESTAURANT</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <h3 class="text-xl font-bold mb-4">Öffnungszeiten</h3>
+                    <p class="text-sm">Mi-Do: 17-22 Uhr<br/>Fr-Sa: 17-23 Uhr<br/>So: 09-14 Uhr</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold mb-4">Reservieren</h3>
+                    <a href="mailto:nasrin.nabatian@gmail.com" class="text-wine">nasrin.nabatian@gmail.com</a>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold mb-4">Adresse</h3>
+                    <p class="text-sm">Im Haselter 9/1<br/>74080 Heilbronn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gutschein -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-[1200px] mx-auto px-5">
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <img src="/images/Gutschein-VS-1-768x1024.jpg" alt="Gutschein" class="rounded-lg shadow-md" />
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold mb-6">GUTSCHEIN</h2>
+                    <a href="#kontakt" class="inline-block px-8 py-3 border-2 border-burgundy text-burgundy hover:bg-burgundy hover:text-white">
+                        Jetzt bestellen
+                    </a>
+                </div>
+                <img src="/images/Gutschein-RS-1-768x1024.jpg" alt="Gutschein" class="rounded-lg shadow-md" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant -->
+    <section id="restaurant" class="py-16">
+        <div class="max-w-[1200px] mx-auto px-5">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Authentisch Persisch</h2>
+                    <p class="text-sm mb-6">Willkommen im NABATIAN Restaurant am Sonnenbrunnen!</p>
+                </div>
+                <img src="/images/Authentisch_persisch_Fest.jpg" alt="Restaurant" class="rounded-lg shadow-md" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="py-16 bg-gray-50">
+        <div class="max-w-[1200px] mx-auto px-5 text-center">
+            <h2 class="text-3xl font-bold mb-8">Kontakt</h2>
+            <p class="text-sm mb-4">Im Haselter 9/1, 74080 Heilbronn</p>
+            <p class="text-wine"><a href="tel:+4917684512873">+49 176 84512873</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-text py-16">
+        <div class="max-w-[1200px] mx-auto px-5 text-center">
+            <p class="text-xs">© 2026 NABATIAN Restaurant. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
