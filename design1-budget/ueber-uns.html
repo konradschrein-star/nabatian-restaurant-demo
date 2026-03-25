@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impressum | Nabatian Restaurant Heilbronn</title>
-    <meta name="robots" content="noindex, nofollow">
+
+    <!-- SEO Meta Tags -->
+    <title>Über uns | Nabatian Restaurant Heilbronn</title>
+    <meta name="description" content="Lernen Sie das Nabatian-Team kennen. Authentische persische Küche mit Leidenschaft serviert in Heilbronn-Böckingen.">
+    <meta name="keywords" content="Über uns, Nabatian Team, Persisches Restaurant Heilbronn">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Über uns | Nabatian Restaurant">
+    <meta property="og:description" content="Das Team hinter dem persischen Restaurant in Heilbronn">
+    <meta property="og:url" content="https://nabatian.de/ueber-uns.html">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nabatian.de/ueber-uns.html">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +30,6 @@
 </head>
 <body>
 
-
     <!-- Header / Navigation -->
     <header class="header" id="header">
         <div class="container">
@@ -32,6 +42,7 @@
                     <ul class="nav__list">
                         <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
                         <li class="nav__item"><a href="restaurant.html" class="nav__link">Restaurant</a></li>
+                        <li class="nav__item"><a href="ueber-uns.html" class="nav__link nav__link--active">Über uns</a></li>
                         <li class="nav__item"><a href="catering.html" class="nav__link">Catering</a></li>
                         <li class="nav__item"><a href="kontakt.html" class="nav__link">Kontakt</a></li>
                     </ul>
@@ -47,113 +58,93 @@
         </div>
     </header>
 
-    <!-- Content Section -->
+    <!-- Hero Section -->
+    <section class="hero hero--small">
+        <div class="hero__image">
+            <img src="images/Authentisch_persisch_Fest.jpg" alt="Nabatian Team" loading="eager">
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <h1 class="hero__title">Über uns</h1>
+            <p class="hero__subtitle">Das Nabatian-Team</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
     <section class="section">
         <div class="container">
-            <div class="legal-content">
-                <h1>Impressum</h1>
+            <div class="content-split">
+                <div class="content-split__text">
+                    <h2>Willkommen im Nabatian</h2>
+                    <p>
+                        Im Herzen von Heilbronn-Böckingen, am idyllischen Sonnenbrunnen, begrüßt Sie das NABATIAN Restaurant
+                        mit authentischer persischer Küche und orientalischer Gastfreundschaft.
+                    </p>
+                    <p>
+                        Seit unserer Eröffnung verwöhnen wir unsere Gäste mit traditionellen persischen Spezialitäten,
+                        die nach Originalrezepten mit frischen, hochwertigen Zutaten zubereitet werden.
+                    </p>
 
-                <h2>Angaben gemäß § 5 TMG</h2>
-                <p>
-                    <strong>NABATIAN Restaurant & Catering am Sonnenbrunnen</strong><br>
-                    Inhaberin: Nasrin Nabatian<br>
-                    Im Haselter 9/1<br>
-                    74080 Heilbronn
-                </p>
+                    <h3 style="color: var(--primary); margin-top: 2rem;">Unsere Philosophie</h3>
+                    <p>
+                        Bei uns treffen persische Gerichte auf authentische orientalische Einrichtung wie im Iran selbst.
+                        In unserem Restaurant möchten wir den Besuchern das Gefühl vermitteln mitten im Orient zu sein –
+                        ein Ort, an dem man aus seiner eigenen täglichen Routine ausbrechen kann.
+                    </p>
+                    <p>
+                        Hierbei setzen wir auf die Stimulierung aller Sinne: Geschmacklich, akustisch und optisch.
+                    </p>
 
-                <h2>Kontakt</h2>
-                <p>
-                    Telefon: <a href="tel:+4917684512873">+49 176 84512873</a><br>
-                    E-Mail: <a href="mailto:nasrin.nabatian@gmail.com">nasrin.nabatian@gmail.com</a>
-                </p>
+                    <blockquote class="quote">
+                        <p class="quote__text">
+                            "Das schönste Haus ist das, welches jedermann offen steht."
+                        </p>
+                        <cite class="quote__author">– 1001 Nacht</cite>
+                    </blockquote>
+                </div>
 
-                <h2>Umsatzsteuer-ID</h2>
-                <p>
-                    Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
-                    [Umsatzsteuer-ID wird nachgetragen]
-                </p>
+                <div class="content-split__image">
+                    <img src="images/hero-buffet.jpg" alt="Persisches Buffet" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <h2>Aufsichtsbehörde</h2>
-                <p>
-                    Gesundheitsamt Heilbronn<br>
-                    Lerchenstraße 40<br>
-                    74072 Heilbronn
-                </p>
+    <!-- Team Values -->
+    <section class="section section--gray">
+        <div class="container">
+            <h2 class="section__title">Was uns ausmacht</h2>
+            <div class="highlights">
+                <div class="highlight-card">
+                    <h3>Authentizität</h3>
+                    <p>Traditionelle persische Rezepte, original zubereitet wie in Persien selbst.</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>Qualität</h3>
+                    <p>Nur frische, hochwertige Zutaten für den bestmöglichen Geschmack.</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>Gastfreundschaft</h3>
+                    <p>Persische Herzlichkeit und orientalische Gastlichkeit in jedem Detail.</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>Atmosphäre</h3>
+                    <p>Authentische Einrichtung für ein echtes Orient-Erlebnis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Besuchen Sie uns!</h2>
                 <p>
-                    Berufsbezeichnung: Gastronomie & Catering<br>
-                    Zuständige Kammer: IHK Heilbronn-Franken
+                    Wir freuen uns schon jetzt, Sie bald willkommen zu heißen.<br>
+                    Ihr Nabatian-Team.
                 </p>
-
-                <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-                <p>
-                    Nasrin Nabatian<br>
-                    Im Haselter 9/1<br>
-                    74080 Heilbronn
-                </p>
-
-                <h2>EU-Streitschlichtung</h2>
-                <p>
-                    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
-                    <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a><br>
-                    Unsere E-Mail-Adresse finden Sie oben im Impressum.
-                </p>
-
-                <h2>Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
-                <p>
-                    Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
-                    Verbraucherschlichtungsstelle teilzunehmen.
-                </p>
-
-                <h2>Haftung für Inhalte</h2>
-                <p>
-                    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den
-                    allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
-                    verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen
-                    zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
-                </p>
-                <p>
-                    Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen
-                    Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der
-                    Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden
-                    Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
-                </p>
-
-                <h2>Haftung für Links</h2>
-                <p>
-                    Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
-                    Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
-                    verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die
-                    verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft.
-                    Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
-                </p>
-                <p>
-                    Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte
-                    einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige
-                    Links umgehend entfernen.
-                </p>
-
-                <h2>Urheberrecht</h2>
-                <p>
-                    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
-                    Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
-                    Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-                    Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
-                </p>
-                <p>
-                    Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter
-                    beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine
-                    Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden
-                    von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
-                </p>
-
-                <hr style="margin: 3rem 0; border: none; border-top: 1px solid #ddd;">
-
-                <p style="font-size: 0.9rem; color: #666;">
-                    <strong>Webdesign:</strong> <a href="https://axtrelis.com" target="_blank" rel="noopener noreferrer">Axtrelis</a>
-                </p>
-
+                <a href="kontakt.html" class="btn btn--primary btn--large">Tisch reservieren</a>
             </div>
         </div>
     </section>
@@ -183,6 +174,7 @@
                     <ul class="footer__links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="restaurant.html">Restaurant</a></li>
+                        <li><a href="ueber-uns.html">Über uns</a></li>
                         <li><a href="catering.html">Catering</a></li>
                         <li><a href="kontakt.html">Kontakt</a></li>
                         <li><a href="impressum.html">Impressum</a></li>

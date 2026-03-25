@@ -146,27 +146,7 @@ p {
 }
 
 /* =========================================
-   5. TOP BAR
-   ========================================= */
-.topbar {
-  background-color: var(--topbar-green);
-  color: var(--white);
-  padding: var(--spacing-xs) 0;
-  font-size: 13px;
-  text-align: center;
-}
-
-.topbar a {
-  color: var(--white);
-  text-decoration: underline;
-}
-
-.topbar a:hover {
-  opacity: 0.9;
-}
-
-/* =========================================
-   6. HEADER & NAVIGATION
+   5. HEADER & NAVIGATION
    ========================================= */
 .header {
   background-color: var(--white);
@@ -820,7 +800,68 @@ p {
 }
 
 /* =========================================
-   19. LEGAL PAGES
+   19. GUTSCHEIN SECTION
+   ========================================= */
+.gutschein-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.gutschein-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.gutschein-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: var(--transition);
+}
+
+.gutschein-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gutschein-content p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.8;
+}
+
+/* =========================================
+   20. QUOTE / BLOCKQUOTE
+   ========================================= */
+.quote {
+  background-color: var(--gray-light);
+  padding: var(--spacing-lg);
+  border-left: 4px solid var(--primary);
+  margin: var(--spacing-lg) 0;
+  border-radius: 4px;
+}
+
+.quote__text {
+  font-size: 1.125rem;
+  font-style: italic;
+  color: var(--gray-dark);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+}
+
+.quote__author {
+  display: block;
+  text-align: right;
+  color: var(--primary);
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* =========================================
+   21. LEGAL PAGES
    ========================================= */
 .legal-content {
   max-width: 800px;
@@ -941,8 +982,14 @@ p {
   .location,
   .content-split,
   .contact-grid,
-  .catering-services {
+  .catering-services,
+  .gutschein-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gutschein-images {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-sm);
   }
 
   .content-split--reverse .content-split__text,
