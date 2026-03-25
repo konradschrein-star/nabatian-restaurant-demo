@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Persisches Restaurant | Nabatian</title>
+
+    <!-- Google Fonts - Maven Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body - Original Settings */
+        body {
+            font-family: 'Maven Pro', sans-serif;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #000;
+        }
+
+        /* Top Bar */
+        #top-bar-wrap {
+            border-bottom: 1px solid #ffffff;
+            background: #ffffff;
+        }
+
+        #top-bar {
+            padding: 5px 20px 0 0;
+        }
+
+        #top-bar-content {
+            text-align: center;
+            color: #0e9b01;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        #top-bar-content strong {
+            color: #0e9b01;
+        }
+
+        #top-bar-content a:hover {
+            color: #bc0f0f;
+        }
+
+        .topbar-content {
+            display: inline-block;
+            padding: 5px 0;
+        }
+
+        /* Header */
+        #site-header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        #site-header.medium-header .top-header-wrap {
+            padding: 26px 0 10px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Logo */
+        #site-logo {
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+
+        #site-logo img {
+            max-width: 200px;
+            max-height: 200px;
+            height: auto;
+        }
+
+        /* Navigation */
+        #site-navigation-wrap {
+            background-color: #ffffff;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .dropdown-menu {
+            list-style: none;
+            display: inline-flex;
+            gap: 0;
+        }
+
+        .dropdown-menu > li {
+            position: relative;
+        }
+
+        .dropdown-menu > li > a {
+            display: block;
+            padding: 0 23px;
+            color: #000000;
+            text-decoration: none;
+            font-family: 'Maven Pro';
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .dropdown-menu > li > a:hover {
+            color: #ad083a;
+        }
+
+        /* Underline effect */
+        .dropdown-menu > li > a span:after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 23px;
+            right: 23px;
+            height: 2px;
+            background-color: #711521;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .dropdown-menu > li > a:hover span:after {
+            transform: scaleX(1);
+        }
+
+        /* Dropdown submenu */
+        .dropdown-menu .sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 189px;
+            background: #ffffff;
+            border: 1px solid #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            list-style: none;
+            display: none;
+            z-index: 1000;
+        }
+
+        .dropdown-menu > li:hover .sub-menu {
+            display: block;
+        }
+
+        .dropdown-menu .sub-menu li {
+            border-bottom: 1px solid #ffffff;
+        }
+
+        .dropdown-menu .sub-menu li a {
+            display: block;
+            padding: 10px 15px;
+            color: #000000;
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 1.2;
+            letter-spacing: 0.6px;
+        }
+
+        .dropdown-menu .sub-menu li a:hover {
+            background-color: #f2f2f2;
+        }
+
+        /* Hero Section */
+        .elementor-section-hero {
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+            background-image: url('Images/hero-buffet.jpg');
+        }
+
+        .elementor-background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: #ffffff;
+            padding: 0 20px;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-family: 'Maven Pro';
+            font-size: 48px;
+            font-weight: normal;
+            line-height: 1.4;
+            letter-spacing: 0.2em;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 72px;
+            }
+        }
+
+        /* Content Section */
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .content-section h1 {
+            font-family: 'Maven Pro';
+            font-size: 23px;
+            line-height: 1.4;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .content-section p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .content-section strong {
+            font-weight: 600;
+        }
+
+        .content-section a {
+            color: #711521;
+            text-decoration: none;
+        }
+
+        .content-section a:hover {
+            color: #ad083a;
+        }
+
+        /* Spacer */
+        .spacer {
+            height: 40px;
+        }
+
+        /* Divider */
+        .divider {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .divider hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 30px 0;
+        }
+
+        /* Gutschein Section */
+        .gutschein-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .gutschein-section {
+                grid-template-columns: 1fr 1fr 1fr;
+                align-items: center;
+            }
+        }
+
+        .gutschein-image {
+            text-align: center;
+        }
+
+        .gutschein-image img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .gutschein-text h2 {
+            font-family: 'Maven Pro';
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .gutschein-text p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .gutschein-cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #0e9b01;
+            color: #ffffff;
+            padding: 12px 32px;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 0.05em;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #0c8501;
+            transform: scale(1.05);
+        }
+
+        /* Restaurant Section */
+        .restaurant-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .restaurant-section {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .restaurant-text blockquote {
+            border-left: 4px solid #711521;
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .restaurant-text blockquote footer {
+            font-style: normal;
+            font-size: 12px;
+            color: #999;
+            margin-top: 10px;
+        }
+
+        .restaurant-image img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        #footer-widgets {
+            background-color: #000000;
+            color: #939393;
+            padding: 75px 0 100px 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+
+        .footer-box h3 {
+            color: #ffffff;
+            font-family: 'Maven Pro';
+            font-size: 13px;
+            line-height: 1;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .footer-box p,
+        .footer-box a {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #939393;
+            text-decoration: none;
+        }
+
+        .footer-box a:hover {
+            color: #711521;
+        }
+
+        /* Footer Bottom */
+        #footer-bottom {
+            background-color: #ffffff;
+            color: #565656;
+            padding: 20px 0;
+        }
+
+        #footer-bottom .container {
+            text-align: center;
+        }
+
+        #copyright {
+            font-family: 'Maven Pro';
+            font-size: 12px;
+            line-height: 1;
+        }
+
+        /* Scroll to Top */
+        #scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 52px;
+            height: 52px;
+            background-color: #711521;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 39px;
+            line-height: 52px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
+        }
+
+        #scroll-top:hover {
+            background-color: #ad083a;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div id="top-bar-wrap">
+    <div id="top-bar">
+        <div id="top-bar-inner">
+            <div id="top-bar-content">
+                <span class="topbar-content">
+                    Reservierungen unter: E-Mail: nasrin.nabatian@gmail.com
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Header -->
+<header id="site-header" class="medium-header">
+    <div class="top-header-wrap">
+        <div class="container">
+            <!-- Logo -->
+            <div id="site-logo">
+                <a href="/">
+                    <img src="Images/cropped-Nabatian_Logo.png" alt="Nabatian Restaurant Logo">
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav id="site-navigation-wrap">
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="/abhol-und-lieferservice">
+                            <span>Abhol- und Lieferservice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/restaurant">
+                            <span>Restaurant</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="/uber-uns">Über uns</a></li>
+                            <li><a href="/persisches-fruehstueck">Frühstück</a></li>
+                            <li><a href="/gutschein">Gutschein</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/speisekarte">
+                            <span>Speisekarte</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/kontakt">
+                            <span>Kontakt</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="elementor-section-hero">
+    <div class="elementor-background-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">NABATIAN RESTAURANT</h1>
+    </div>
+</section>
+
+<!-- Spacer -->
+<div class="spacer"></div>
+
+<!-- Title Section -->
+<section class="content-section">
+    <h1>PERSISCHES RESTAURANT</h1>
+</section>
+
+<!-- Content Section -->
+<section class="content-section">
+    <p><strong>ÖFFNUNGSZEITEN:</strong></p>
+
+    <p><strong>Abendessen</strong><br>
+    Mittwoch und Donnerstag: 17 – 22 Uhr</p>
+
+    <p>Freitag und Samstag: 17 – 23 Uhr</p>
+
+    <p>Sonntag: 09 – 12 Uhr (Frühstück), 12 – 14 Uhr (Mittagessen)</p>
+
+    <p><strong>RESERVIEREN SIE JETZT: </strong><br>
+    nasrin.nabatian@gmail.com oder <a href="/kontakt">Kontaktformular</a></p>
+
+    <p><strong>ADRESSE: </strong><br>
+    <a href="https://www.google.com/maps/place/Nabatian+Restaurant+%26+Catering/@49.140566,9.1864087,17z/" target="_blank">Im Haselter 9/1, 74080 Heilbronn</a><br>
+    Am Sonnenbrunnen in Böckingen</p>
+
+    <p><strong>ABHOLSERVICE: </strong>Sollten Sie es bevorzugen daheim zu speisen, können Sie gerne auch unseren <strong>persischen Abholservice</strong> nutzen.</p>
+
+    <p>Wir freuen uns sehr auf Sie!</p>
+</section>
+
+<!-- Divider -->
+<div class="divider">
+    <hr>
+</div>
+
+<!-- Gutschein Section -->
+<section class="gutschein-section">
+    <div class="gutschein-image">
+        <img src="Images/Gutschein-VS-1-768x1024.jpg" alt="Gutschein Vorderseite">
+    </div>
+
+    <div class="gutschein-image">
+        <img src="Images/Gutschein-RS-1-768x1024.jpg" alt="Gutschein Rückseite">
+    </div>
+
+    <div class="gutschein-text">
+        <h2>VERSCHENKEN SIE GENUSS!</h2>
+
+        <p>Mit unserem <a href="/gutschein">NABATIAN Gutschein</a> verschenken Sie Genuss und persisches Esserlebnis zugleich. Ob Weihnachten, Geburtstag, Ostern, Muttertag oder nur so, um eine Freude zu bereiten. Gelegenheiten für einen Gutschein gibt es viele.</p>
+
+        <p>Sie sind noch auf der Suche nach der passenden Aufmerksamkeit für Ihre Mitarbeiter? Anlässlich eines Firmenjubiläums oder einfach nur um Ihre Wertschätzung auszudrücken? Belohnen Sie Ihre Mitarbeiter mit ein wenig Urlaubsflair und einem persischen Esserlebnis.</p>
+
+        <p>Gerne verschicken wir den Gutschein direkt an Ihren Lieblingsmensch. Ein Anruf genügt.</p>
+
+        <div class="gutschein-cta">
+            <a href="/kontakt" class="cta-button">Gutschein bestellen</a>
+        </div>
+    </div>
+</section>
+
+<!-- Spacer -->
+<div class="spacer"></div>
+
+<!-- Restaurant Title -->
+<section class="content-section">
+    <h1>RESTAURANT</h1>
+</section>
+
+<!-- Restaurant Section -->
+<section class="restaurant-section">
+    <div class="restaurant-text">
+        <p>PERSISCHE OASE INMITTEN HEILBRONNS.</p>
+
+        <p>Bei uns treffen persische Gerichte auf authentische orientalische Einrichtung wie im Iran selbst. In unserem <a href="/restaurant">Restaurant</a> möchten wir den Besuchern das Gefühl vermitteln mitten im Orient zu sein. Ein Ort, an dem man aus seiner eigenen täglichen Routine ausbrechen kann. Hierbei setzen wir auf die Stimulierung aller Sinne. Geschmacklich, akustisch und optisch. Kommen Sie vorbei uns überzeugen Sie sich selbst.</p>
+
+        <p>Bleiben Sie informiert und folgen Sie uns auf <a href="https://www.facebook.com/profile.php?id=100045701568663" target="_blank">Facebook</a> und <a href="https://www.instagram.com/nabatian_restaurant_catering/?hl=en" target="_blank">Instagram</a>.</p>
+
+        <blockquote>
+            <p>Das schönste Haus ist das, welches jedermann offen steht.</p>
+            <footer>— 1001 Nacht</footer>
+        </blockquote>
+
+        <p>Wir freuen uns schon jetzt, Sie bald willkommen zu heißen.</p>
+
+        <p>Ihr <a href="/uber-uns">Nabatian-Team</a>.</p>
+    </div>
+
+    <div class="restaurant-image">
+        <img src="Images/Authentisch_persisch_Fest.jpg" alt="Authentisch persisches Fest">
+    </div>
+</section>
+
+<!-- Footer Widgets -->
+<footer id="footer-widgets">
+    <div class="footer-container">
+        <div class="footer-box">
+            <h3>SO ERREICHEN SIE UNS</h3>
+            <p>Nabatian Restaurant</p>
+            <p>Im Haselter 9/1<br>74080 Heilbronn<br>Am Sonnenbrunnen</p>
+            <p>E-Mail: nasrin.nabatian@gmail.com</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>NABATIAN</h3>
+            <p><a href="/restaurant">Restaurant</a></p>
+            <p><a href="/uber-uns">Über uns</a></p>
+            <p><a href="/speisekarte">Speisekarte</a></p>
+            <p><a href="/persisches-fruehstueck">Frühstück</a></p>
+            <p><a href="/gutschein">Gutschein</a></p>
+        </div>
+
+        <div class="footer-box">
+            <!-- Empty column like original -->
+        </div>
+
+        <div class="footer-box">
+            <h3>KONTAKT</h3>
+            <p><a href="/impressum">Impressum</a></p>
+            <p><a href="/datenschutz">Datenschutz</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Footer Bottom -->
+<div id="footer-bottom">
+    <div class="container">
+        <div id="copyright">
+            <p>Copyright © 2025 Nabatian</p>
+        </div>
+    </div>
+</div>
+
+<!-- Scroll to Top -->
+<a href="#top" id="scroll-top" aria-label="Scroll to top">
+    ↑
+</a>
+
+</body>
+</html>
