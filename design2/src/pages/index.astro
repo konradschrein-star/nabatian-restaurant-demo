@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Persisches Restaurant Heilbronn | Nabatian";
+const description = "Authentische persische Küche in Heilbronn. Nabatian Restaurant & Catering am Sonnenbrunnen - Persisches Buffet, Catering & Events.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+
+  <Hero
+    title="NABATIAN RESTAURANT"
+    subtitle="Persisches Restaurant & Catering am Sonnenbrunnen - Heilbronn - Böckingen"
+    backgroundImage="/images/hero-buffet.jpg"
+    ctaText="RESERVIEREN SIE JETZT"
+    ctaLink="/kontakt"
+  />
+
+  <!-- Restaurant Preview Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="border-b border-black pb-8 mb-12">
+        <h2 class="text-3xl font-['Maven_Pro'] font-medium mb-4">Persisches Restaurant</h2>
+        <p class="text-base font-['Maven_Pro'] leading-relaxed">
+          Erleben Sie authentische persische Küche in gemütlicher Atmosphäre. Unser Restaurant am
+          Sonnenbrunnen in Heilbronn-Böckingen bietet Ihnen eine vielfältige Auswahl an traditionellen
+          persischen Spezialitäten.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Opening Hours -->
+        <div>
+          <h3 class="text-2xl font-['Maven_Pro'] font-medium mb-6">Öffnungszeiten</h3>
+          <div class="space-y-3 font-['Maven_Pro']">
+            <div class="flex justify-between border-b pb-2">
+              <span>Mittwoch & Donnerstag:</span>
+              <span class="text-[#711521] font-medium">17:00 - 22:00 Uhr</span>
+            </div>
+            <div class="flex justify-between border-b pb-2">
+              <span>Freitag & Samstag:</span>
+              <span class="text-[#711521] font-medium">17:00 - 23:00 Uhr</span>
+            </div>
+            <div class="flex justify-between border-b pb-2">
+              <span>Sonntag Frühstück:</span>
+              <span class="text-[#711521] font-medium">09:00 - 12:00 Uhr</span>
+            </div>
+            <div class="flex justify-between border-b pb-2">
+              <span>Sonntag Mittagessen:</span>
+              <span class="text-[#711521] font-medium">12:00 - 14:00 Uhr</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialties -->
+        <div>
+          <h3 class="text-2xl font-['Maven_Pro'] font-medium mb-6">Unsere Spezialitäten</h3>
+          <ul class="space-y-2 font-['Maven_Pro']">
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">•</span>
+              <span>Authentisches persisches Buffet</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">•</span>
+              <span>Traditionelle Kebab-Variationen</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">•</span>
+              <span>Vegetarische persische Gerichte</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">•</span>
+              <span>Persische Vorspeisen & Mezze</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">•</span>
+              <span>Orientalische Desserts</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a
+          href="/restaurant"
+          class="inline-block bg-[#711521] hover:bg-[#6B1C1C] text-white font-['Maven_Pro'] font-medium text-lg px-8 py-4 transition-colors"
+        >
+          MEHR ERFAHREN
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catering Preview Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-['Maven_Pro'] font-medium mb-4">Catering & Events</h2>
+        <p class="text-lg font-['Maven_Pro'] max-w-2xl mx-auto">
+          Wir bieten professionelles Catering für Ihre Events - Firmenevents, Hochzeiten,
+          Geburtstage und private Feiern.
+        </p>
+      </div>
+
+      <!-- Images Gallery -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="/images/Authentisch_persisch_Fest.jpg"
+            alt="Persisches Fest"
+            class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="/images/hero-buffet.jpg"
+            alt="Persisches Buffet"
+            class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="/images/Gutschein-VS-1-768x1024.jpg"
+            alt="Nabatian Gutschein"
+            class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="text-lg font-['Maven_Pro'] mb-6 italic text-[#711521]">
+          "Genießen Sie authentische persische Gastfreundschaft und exquisite Küche für Ihre besonderen Anlässe."
+        </p>
+        <a
+          href="/catering"
+          class="inline-block bg-[#711521] hover:bg-[#6B1C1C] text-white font-['Maven_Pro'] font-medium text-lg px-8 py-4 transition-colors"
+        >
+          CATERING ANFRAGEN
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Preview Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-['Maven_Pro'] font-medium mb-4">Impressionen</h2>
+        <p class="text-lg font-['Maven_Pro'] max-w-2xl mx-auto">
+          Entdecken Sie die Vielfalt unserer persischen Küche
+        </p>
+      </div>
+
+      <div class="text-center">
+        <a
+          href="/galerie"
+          class="inline-block bg-[#711521] hover:bg-[#6B1C1C] text-white font-['Maven_Pro'] font-medium text-lg px-8 py-4 transition-colors"
+        >
+          ZUR GALERIE
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,50 @@
+---
+// Hero Component - Reusable Hero Section with Background Image
+
+interface Props {
+  title: string;
+  subtitle: string;
+  backgroundImage: string;
+  ctaText?: string;
+  ctaLink?: string;
+  overlayOpacity?: number; // 0-100, default 60
+}
+
+const {
+  title,
+  subtitle,
+  backgroundImage,
+  ctaText,
+  ctaLink,
+  overlayOpacity = 60,
+} = Astro.props;
+---
+
+<section class="relative h-[600px] flex items-center justify-center">
+  <!-- Background Image -->
+  <div
+    class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={`background-image: url('${backgroundImage}');`}
+  >
+    <!-- Dark Overlay -->
+    <div class={`absolute inset-0 bg-black/${overlayOpacity}`}></div>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="relative z-10 text-center text-white px-4">
+    <h1 class="hero-title text-5xl md:text-6xl font-['Quattrocento_Sans'] font-medium tracking-[0.25rem] mb-6">
+      {title}
+    </h1>
+    <p class="text-xl md:text-2xl font-['Maven_Pro'] mb-8 max-w-2xl mx-auto">
+      {subtitle}
+    </p>
+    {ctaText && ctaLink && (
+      <a
+        href={ctaLink}
+        class="inline-block bg-[#711521] hover:bg-[#6B1C1C] text-white font-['Maven_Pro'] font-medium text-lg px-8 py-4 transition-colors"
+      >
+        {ctaText}
+      </a>
+    )}
+  </div>
+</section>

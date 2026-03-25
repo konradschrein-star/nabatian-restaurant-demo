@@ -1,0 +1,58 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/images/cropped-Nabatian_Logo.png" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Google Fonts - Maven Pro + Quattrocento Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&family=Quattrocento+Sans:wght@400;500;700&family=Roboto:wght@400;500&family=Roboto+Slab:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SEO - Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Nabatian Restaurant & Catering am Sonnenbrunnen",
+      "image": "/images/hero-buffet.jpg",
+      "description": "Persisches Restaurant und Catering in Heilbronn - Authentische persische Küche",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Im Haselter 9/1",
+        "addressLocality": "Heilbronn",
+        "addressRegion": "Baden-Württemberg",
+        "postalCode": "74080",
+        "addressCountry": "DE"
+      },
+      "telephone": "+49 176 84512873",
+      "email": "nasrin.nabatian@gmail.com",
+      "servesCuisine": "Persisch",
+      "priceRange": "€€",
+      "openingHours": "We-Th 17:00-22:00, Fr-Sa 17:00-23:00, Su 09:00-14:00"
+    }
+    </script>
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

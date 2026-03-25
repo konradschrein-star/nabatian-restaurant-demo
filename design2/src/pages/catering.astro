@@ -1,0 +1,267 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Catering & Events | Nabatian - Persisches Catering Heilbronn";
+const description = "Professionelles persisches Catering für Firmenevents, Hochzeiten, Geburtstage und private Feiern. Authentische persische Küche für Ihre Events in Heilbronn.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+
+  <Hero
+    title="CATERING & EVENTS"
+    subtitle="Persische Gastfreundschaft für Ihre besonderen Anlässe"
+    backgroundImage="/images/Authentisch_persisch_Fest.jpg"
+    ctaText="CATERING ANFRAGEN"
+    ctaLink="/kontakt"
+  />
+
+  <!-- Catering Intro Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-['Maven_Pro'] font-medium mb-4">Ihr Event in persischem Stil</h2>
+        <p class="text-lg font-['Maven_Pro'] max-w-3xl mx-auto leading-relaxed">
+          Ob Firmenevent, Hochzeit, Geburtstag oder private Feier - wir sorgen mit authentischer
+          persischer Küche und professionellem Service für unvergessliche kulinarische Momente.
+        </p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div class="text-center">
+          <div class="bg-[#711521] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl">
+            🏢
+          </div>
+          <h3 class="font-['Maven_Pro'] font-medium text-lg mb-2">Firmenevents</h3>
+          <p class="font-['Maven_Pro'] text-sm text-gray-600">
+            Beeindrucken Sie Geschäftspartner mit exquisiter persischer Küche
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-[#711521] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl">
+            💍
+          </div>
+          <h3 class="font-['Maven_Pro'] font-medium text-lg mb-2">Hochzeiten</h3>
+          <p class="font-['Maven_Pro'] text-sm text-gray-600">
+            Machen Sie Ihren besonderen Tag kulinarisch unvergesslich
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-[#711521] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl">
+            🎂
+          </div>
+          <h3 class="font-['Maven_Pro'] font-medium text-lg mb-2">Geburtstage</h3>
+          <p class="font-['Maven_Pro'] text-sm text-gray-600">
+            Feiern Sie mit Familie und Freunden bei persischer Gastfreundschaft
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-[#711521] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl">
+            🎉
+          </div>
+          <h3 class="font-['Maven_Pro'] font-medium text-lg mb-2">Private Feiern</h3>
+          <p class="font-['Maven_Pro'] text-sm text-gray-600">
+            Individuelles Catering für jede Art von privatem Event
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catering Packages Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-['Maven_Pro'] font-medium mb-4">Unsere Catering-Pakete</h2>
+        <p class="text-lg font-['Maven_Pro'] max-w-2xl mx-auto">
+          Wählen Sie das passende Paket für Ihr Event - alle Preise pro Person
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Bronze Package -->
+        <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-gray-200 hover:border-[#711521] transition-all">
+          <h3 class="text-2xl font-['Maven_Pro'] font-medium text-center mb-2">Bronze</h3>
+          <p class="text-4xl font-['Maven_Pro'] font-bold text-[#711521] text-center mb-6">€20<span class="text-lg text-gray-600">/Person</span></p>
+          <ul class="space-y-3 font-['Maven_Pro'] text-sm mb-8">
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>Auswahl von 3 Hauptgerichten</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>2 Vorspeisen / Salate</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>Persischer Reis & Fladenbrot</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>Grundservice & Geschirr</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>Mindestanzahl: 20 Personen</span>
+            </li>
+          </ul>
+          <a href="/kontakt" class="block text-center bg-[#711521] hover:bg-[#6B1C1C] text-white font-['Maven_Pro'] font-medium px-6 py-3 transition-colors">
+            ANFRAGEN
+          </a>
+        </div>
+
+        <!-- Silver Package (Featured) -->
+        <div class="bg-white rounded-lg shadow-xl p-8 border-4 border-[#711521] relative transform md:scale-105">
+          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#711521] text-white px-4 py-1 rounded-full text-sm font-['Maven_Pro']">
+            BELIEBT
+          </div>
+          <h3 class="text-2xl font-['Maven_Pro'] font-medium text-center mb-2">Silver</h3>
+          <p class="text-4xl font-['Maven_Pro'] font-bold text-[#711521] text-center mb-6">€35<span class="text-lg text-gray-600">/Person</span></p>
+          <ul class="space-y-3 font-['Maven_Pro'] text-sm mb-8">
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>Auswahl von 5 Hauptgerichten</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>4 Vorspeisen / Salate</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>Persischer Reis, Fladenbrot & Beilagen</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>1 Dessert</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>Vollservice & Premium Geschirr</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>Mindestanzahl: 15 Personen</span>
+            </li>
+          </ul>
+          <a href="/kontakt" class="block text-center bg-[#711521] hover:bg-[#6B1C1C] text-white font-['Maven_Pro'] font-medium px-6 py-3 transition-colors">
+            ANFRAGEN
+          </a>
+        </div>
+
+        <!-- Gold Package -->
+        <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-gray-200 hover:border-[#711521] transition-all">
+          <h3 class="text-2xl font-['Maven_Pro'] font-medium text-center mb-2">Gold</h3>
+          <p class="text-4xl font-['Maven_Pro'] font-bold text-[#711521] text-center mb-6">€50<span class="text-lg text-gray-600">/Person</span></p>
+          <ul class="space-y-3 font-['Maven_Pro'] text-sm mb-8">
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>Unbegrenzte Auswahl Hauptgerichte</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>6+ Vorspeisen / Salate</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>Premium Beilagen & Reis-Spezialitäten</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>Dessert-Buffet</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>Vollservice & Dekoration</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#711521] mr-2">✓</span>
+              <span>Individuelle Menüzusammenstellung</span>
+            </li>
+          </ul>
+          <a href="/kontakt" class="block text-center bg-[#711521] hover:bg-[#6B1C1C] text-white font-['Maven_Pro'] font-medium px-6 py-3 transition-colors">
+            ANFRAGEN
+          </a>
+        </div>
+      </div>
+
+      <p class="text-center font-['Maven_Pro'] text-sm mt-8 text-gray-600">
+        Alle Pakete können individuell angepasst werden. Vegetarische und vegane Optionen verfügbar.
+      </p>
+    </div>
+  </section>
+
+  <!-- Event Gallery Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-['Maven_Pro'] font-medium mb-4">Vergangene Events</h2>
+        <p class="text-lg font-['Maven_Pro'] max-w-2xl mx-auto">
+          Impressionen unserer Catering-Events
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="/images/Authentisch_persisch_Fest.jpg"
+            alt="Persisches Fest Catering"
+            class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="/images/hero-buffet.jpg"
+            alt="Catering Buffet"
+            class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="/images/Gutschein-VS-1-768x1024.jpg"
+            alt="Nabatian Catering"
+            class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="text-lg font-['Maven_Pro'] italic text-[#711521] mb-6">
+          "Genießen Sie authentische persische Gastfreundschaft und exquisite Küche für Ihre besonderen Anlässe."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-[#711521] text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-['Maven_Pro'] font-medium mb-4">Bereit für Ihr Event?</h2>
+      <p class="text-lg font-['Maven_Pro'] mb-8">
+        Kontaktieren Sie uns für ein unverbindliches Angebot und persönliche Beratung.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a
+          href="tel:+4917684512873"
+          class="inline-block bg-white text-[#711521] hover:bg-gray-100 font-['Maven_Pro'] font-medium text-lg px-8 py-4 transition-colors"
+        >
+          ☎ +49 176 84512873
+        </a>
+        <a
+          href="mailto:nasrin.nabatian@gmail.com"
+          class="inline-block bg-[#ad083a] hover:bg-[#6B1C1C] text-white font-['Maven_Pro'] font-medium text-lg px-8 py-4 transition-colors"
+        >
+          📧 E-MAIL SENDEN
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
