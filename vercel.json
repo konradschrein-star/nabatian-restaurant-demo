@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd design2 && npm install && npm run build",
-  "outputDirectory": "design2/dist",
-  "installCommand": "cd design2 && npm install"
-}
