@@ -1,22 +1,5 @@
 {
-  "version": 2,
-  "name": "nabatian-restaurant-demo",
-  "builds": [
-    {
-      "src": "design2/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "design2/dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/design2/dist/$1"
-    }
-  ]
+  "buildCommand": "cd design2 && npm install && npm run build",
+  "outputDirectory": "design2/dist",
+  "installCommand": "cd design2 && npm install"
 }
