@@ -54,7 +54,7 @@
             padding: 3rem 2rem;
         }
 
-        /* Axtrelis Badge */
+        /* Axtrelis Badge - Now a link */
         .axtrelis-badge {
             display: inline-flex;
             align-items: center;
@@ -69,11 +69,14 @@
             margin-bottom: 2rem;
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         .axtrelis-badge:hover {
             border-color: #a8d8ff;
             box-shadow: 0 0 20px rgba(168, 216, 255, 0.3);
+            transform: translateY(-2px);
         }
 
         .axtrelis-badge svg {
@@ -185,7 +188,7 @@
             opacity: 1;
         }
 
-        /* Icon */
+        /* Custom SVG Icons - NO EMOJIS! */
         .version-icon {
             width: 64px;
             height: 64px;
@@ -196,7 +199,6 @@
             border: 1px solid rgba(168, 216, 255, 0.2);
             border-radius: 16px;
             margin-bottom: 1.5rem;
-            font-size: 2rem;
             transition: all 0.3s ease;
         }
 
@@ -205,6 +207,12 @@
             border-color: #a8d8ff;
             transform: scale(1.1) rotateY(180deg);
             box-shadow: 0 0 30px rgba(168, 216, 255, 0.3);
+        }
+
+        .version-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: #a8d8ff;
         }
 
         .version-title {
@@ -465,12 +473,12 @@
 <body>
     <div class="container">
         <header>
-            <div class="axtrelis-badge">
+            <a href="https://axtrelis.com" class="axtrelis-badge" target="_blank" rel="noopener">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                 </svg>
                 Axtrelis Webdesign
-            </div>
+            </a>
 
             <h1>Nabatian Restaurant</h1>
             <p class="subtitle">Demo-Versionen · Heilbronn-Böckingen</p>
@@ -484,7 +492,18 @@
             <div class="versions">
                 <!-- Classic Version -->
                 <div class="version-card">
-                    <div class="version-icon">🏛️</div>
+                    <div class="version-icon">
+                        <!-- Building/Temple Icon (SVG) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21h18"></path>
+                            <path d="M5 21V7l8-4v18"></path>
+                            <path d="M19 21V11l-6-4"></path>
+                            <path d="M9 9v.01"></path>
+                            <path d="M9 12v.01"></path>
+                            <path d="M9 15v.01"></path>
+                            <path d="M9 18v.01"></path>
+                        </svg>
+                    </div>
                     <h2 class="version-title">Classic</h2>
                     <p class="version-subtitle">Traditional Persian Style</p>
                     <div class="version-price">€500</div>
@@ -500,14 +519,19 @@
                         <li>SEO-optimiert</li>
                     </ul>
 
-                    <a href="./design2/" class="cta-button">
+                    <a href="https://nabatian-classic.vercel.app" target="_blank" class="cta-button">
                         <span>Classic Version ansehen</span>
                     </a>
                 </div>
 
                 <!-- Premium Version -->
                 <div class="version-card">
-                    <div class="version-icon">⭐</div>
+                    <div class="version-icon">
+                        <!-- Star/Premium Icon (SVG) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
                     <h2 class="version-title">Premium</h2>
                     <p class="version-subtitle">Modern Luxury Design</p>
                     <div class="version-price">€1,000</div>
@@ -523,7 +547,7 @@
                         <li>Dubai restaurant aesthetic</li>
                     </ul>
 
-                    <a href="./design3/" class="cta-button">
+                    <a href="https://nabatian-premium.vercel.app" target="_blank" class="cta-button">
                         <span>Premium Version ansehen</span>
                     </a>
                 </div>
