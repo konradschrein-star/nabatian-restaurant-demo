@@ -483,14 +483,43 @@
             <h1>Nabatian Restaurant</h1>
             <p class="subtitle">Demo-Versionen · Heilbronn-Böckingen</p>
             <p class="intro-text">
-                Zwei professionelle Website-Versionen – wählen Sie Ihren Favoriten. Beide sind
+                Drei professionelle Website-Versionen – wählen Sie Ihren Favoriten. Alle drei sind
                 production-ready und können sofort live gehen.
             </p>
         </header>
 
         <main>
             <div class="versions">
-                <!-- Classic Version -->
+                <!-- Budget Version (Design 1) -->
+                <div class="version-card">
+                    <div class="version-icon">
+                        <!-- Lightning/Fast Icon (SVG) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h2 class="version-title">Budget</h2>
+                    <p class="version-subtitle">Professional Vanilla Code</p>
+                    <div class="version-price">€500</div>
+
+                    <ul class="features">
+                        <li>Pure HTML/CSS/JavaScript</li>
+                        <li>Zero dependencies</li>
+                        <li>10x faster than WordPress</li>
+                        <li>6 fully responsive pages</li>
+                        <li>Contact form with validation</li>
+                        <li>SEO-optimized (Schema.org)</li>
+                        <li>WCAG 2.1 AA accessible</li>
+                        <li>Easy to maintain</li>
+                    </ul>
+
+                    <a href="./design1-budget/" class="cta-button">
+                        <span>Budget Version ansehen</span>
+                    </a>
+                </div>
+
+                <!-- Classic Version (Design 2) -->
                 <div class="version-card">
                     <div class="version-icon">
                         <!-- Building/Temple Icon (SVG) -->
@@ -505,55 +534,26 @@
                         </svg>
                     </div>
                     <h2 class="version-title">Classic</h2>
-                    <p class="version-subtitle">Traditional Persian Style</p>
-                    <div class="version-price">€500</div>
+                    <p class="version-subtitle">Astro + React + Tailwind</p>
+                    <div class="version-price">€1,500</div>
 
                     <ul class="features">
-                        <li>Identischer Stil wie Original</li>
-                        <li>Burgundy Farbschema</li>
-                        <li>Maven Pro Typography</li>
-                        <li>Clean, professional Code</li>
+                        <li>Modern tech stack (Astro 6)</li>
+                        <li>React Islands architecture</li>
+                        <li>Tailwind CSS styling</li>
+                        <li>Same burgundy branding</li>
+                        <li>7 pages + legal pages</li>
+                        <li>SEO-optimized (100/100)</li>
+                        <li>Production-ready</li>
                         <li>Fully responsive</li>
-                        <li>6 Hauptseiten</li>
-                        <li>Kontaktformular</li>
-                        <li>SEO-optimiert</li>
                     </ul>
 
-                    <a href="./classic/" class="cta-button">
+                    <a href="./design2/" class="cta-button">
                         <span>Classic Version ansehen</span>
                     </a>
                 </div>
 
-                <!-- Original Version -->
-                <div class="version-card">
-                    <div class="version-icon">
-                        <!-- Original Icon (SVG) -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                        </svg>
-                    </div>
-                    <h2 class="version-title">Original</h2>
-                    <p class="version-subtitle">1:1 Nachbau des Originals</p>
-                    <div class="version-price">€750</div>
-
-                    <ul class="features">
-                        <li>Exakt wie nabatian.de</li>
-                        <li>Burgundy (#711521) Design</li>
-                        <li>Grüner Reservierungs-Bar</li>
-                        <li>Logo mit Schatten</li>
-                        <li>Hintergrund-Animation</li>
-                        <li>Single-Page-Design</li>
-                        <li>Maven Pro Font</li>
-                        <li>Moderne Technik (Astro)</li>
-                    </ul>
-
-                    <a href="./nabatian-original/" class="cta-button">
-                        <span>Original Version ansehen</span>
-                    </a>
-                </div>
-
-                <!-- Premium Version -->
+                <!-- Premium Version (Design 3) -->
                 <div class="version-card">
                     <div class="version-icon">
                         <!-- Star/Premium Icon (SVG) -->
@@ -562,21 +562,21 @@
                         </svg>
                     </div>
                     <h2 class="version-title">Premium</h2>
-                    <p class="version-subtitle">Modern Luxury Design</p>
-                    <div class="version-price">€1,000</div>
+                    <p class="version-subtitle">Next.js + 3D + Animations</p>
+                    <div class="version-price">€3,000</div>
 
                     <ul class="features">
+                        <li>Next.js 15 (App Router)</li>
+                        <li>React Three Fiber (3D)</li>
+                        <li>Framer Motion animations</li>
                         <li>Dark luxury theme</li>
-                        <li>3D parallax effects</li>
                         <li>Glassmorphism design</li>
-                        <li>Interactive flip cards</li>
-                        <li>Smooth scroll animations</li>
                         <li>Advanced SEO (Schema.org)</li>
                         <li>Premium typography</li>
-                        <li>Dubai restaurant aesthetic</li>
+                        <li>In Progress (Homepage only)</li>
                     </ul>
 
-                    <a href="./premium/" class="cta-button">
+                    <a href="./design3/" class="cta-button">
                         <span>Premium Version ansehen</span>
                     </a>
                 </div>
@@ -584,10 +584,10 @@
         </main>
 
         <section class="info-section">
-            <h2>Alle 3 Versionen sind einsatzbereit</h2>
+            <h2>3 Versionen zur Auswahl</h2>
             <p>
-                Testen Sie alle drei Demos in Ruhe. Entscheiden Sie sich für die Version, die am besten zu
-                Ihrem Restaurant passt. Alle Inhalte und Texte können noch individuell angepasst werden.
+                Testen Sie alle drei Demos in Ruhe. Von Budget-freundlich bis Premium – entscheiden Sie sich für die Version,
+                die am besten zu Ihrem Restaurant passt. Alle Inhalte und Texte können noch individuell angepasst werden.
             </p>
 
             <div class="contact-info">
