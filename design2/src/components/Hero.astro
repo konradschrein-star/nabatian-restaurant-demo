@@ -1,5 +1,5 @@
 ---
-// Hero Component - Reusable Hero Section with Background Image
+// Hero Component - Professional Hero Section with Full-Screen Image
 
 interface Props {
   title: string;
@@ -18,31 +18,36 @@ const {
   ctaLink,
   overlayOpacity = 60,
 } = Astro.props;
+
+const overlayClass = overlayOpacity === 60 ? 'bg-black/60' : `bg-black/${overlayOpacity}`;
 ---
 
-<section class="relative h-[600px] flex items-center justify-center overflow-hidden">
+<section class="relative h-[70vh] min-h-[500px] max-h-[800px] flex items-center justify-center overflow-hidden">
   <!-- Background Image -->
   <img
     src={backgroundImage}
     alt=""
-    class="absolute inset-0 w-full h-full object-cover"
+    class="absolute inset-0 w-full h-full object-cover object-center"
     loading="eager"
+    decoding="async"
   />
-  <!-- Dark Overlay -->
-  <div class={`absolute inset-0 bg-black/${overlayOpacity}`}></div>
+
+  <!-- Dark Overlay with Gradient -->
+  <div class={`absolute inset-0 ${overlayClass}`}></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
 
   <!-- Hero Content -->
-  <div class="relative z-10 text-center text-white px-4">
-    <h1 class="hero-title text-5xl md:text-6xl font-['Quattrocento_Sans'] font-medium tracking-[0.25rem] mb-6">
+  <div class="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-['Quattrocento_Sans'] font-medium tracking-wide mb-4 md:mb-6 drop-shadow-2xl">
       {title}
     </h1>
-    <p class="text-xl md:text-2xl font-['Maven_Pro'] mb-8 max-w-2xl mx-auto">
+    <p class="text-lg sm:text-xl md:text-2xl font-['Maven_Pro'] mb-6 md:mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-lg opacity-95">
       {subtitle}
     </p>
     {ctaText && ctaLink && (
       <a
         href={ctaLink}
-        class="inline-block bg-[#711521] hover:bg-[#6B1C1C] text-white font-['Maven_Pro'] font-medium text-lg px-8 py-4 transition-colors"
+        class="inline-block bg-[#711521] hover:bg-[#8a1a2a] text-white font-['Maven_Pro'] font-semibold text-base md:text-lg px-8 md:px-12 py-3 md:py-4 rounded-sm transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform"
       >
         {ctaText}
       </a>
