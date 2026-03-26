@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import PremiumMenu from '../components/PremiumMenu';
 import { menuData } from '../data/menu';
 ---
 
@@ -13,25 +12,48 @@ import { menuData } from '../data/menu';
     <div class="container mx-auto px-4">
       <div class="max-w-4xl mx-auto text-center mb-16">
         <h1 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-6 italic">Unsere Speisekarte</h1>
-        <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+        <div class="w-24 h-1 bg-burgundy mx-auto mb-8"></div>
         <p class="text-lg text-neutral-600 leading-relaxed">
-          Entdecken Sie die Vielfalt der persischen Küche. Von traditionellen Grillgerichten bis hin zu vegetarischen Spezialitäten – 
-          wir verwenden ausschließlich frische Zutaten und authentische Gewürze.
+          Entdecken Sie die Vielfalt der persischen Küche. Von traditionellen Grillgerichten bis hin zu vegetarischen Spezialitäten.
         </p>
       </div>
 
-      <div class="bg-neutral-900 rounded-3xl p-4 md:p-12 shadow-2xl">
-        <PremiumMenu client:load initialItems={menuData} />
+      <div class="max-w-4xl mx-auto">
+        <div class="grid gap-12">
+          {menuData.map((category) => (
+            <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+              <h2 class="text-2xl font-serif font-bold text-burgundy mb-8 border-b pb-4">{category.category}</h2>
+              <div class="grid gap-8">
+                {category.items.map((item) => (
+                  <div class="flex justify-between items-start border-b border-gray-200 pb-4 last:border-0 hover:bg-white/50 transition-colors p-2 rounded-lg">
+                    <div class="flex-grow">
+                      <div class="flex items-center gap-2 mb-1">
+                        <h3 class="text-lg font-bold text-neutral-800">{item.name}</h3>
+                        {item.vegetarian && (
+                          <span class="text-[10px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Veggie</span>
+                        )}
+                      </div>
+                      <p class="text-sm text-neutral-500 italic">{item.description}</p>
+                    </div>
+                    <div class="text-lg font-bold text-burgundy ml-4">
+                      {item.price}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div class="mt-24 bg-neutral-50 rounded-2xl p-8 md:p-12 border border-neutral-100 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="mt-24 bg-neutral-900 rounded-3xl p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8">
         <div class="max-w-xl">
-          <h2 class="text-2xl font-bold text-neutral-900 mb-4">Möchten Sie lieber zu Hause genießen?</h2>
-          <p class="text-neutral-600">
+          <h2 class="text-2xl md:text-3xl font-bold mb-4 font-serif">Möchten Sie lieber zu Hause genießen?</h2>
+          <p class="text-white/60">
             Alle unsere Gerichte sind auch zur Abholung verfügbar. Rufen Sie uns einfach an oder kommen Sie vorbei.
           </p>
         </div>
-        <a href="/kontakt" class="bg-primary text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-secondary transition-colors shadow-lg shadow-primary/20 whitespace-nowrap">
+        <a href="/#kontakt" class="bg-burgundy text-white px-10 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-white hover:text-burgundy transition-all shadow-xl shadow-burgundy/20 whitespace-nowrap">
           Jetzt Reservieren
         </a>
       </div>
@@ -40,6 +62,17 @@ import { menuData } from '../data/menu';
 
   <Footer />
 </Layout>
+
+<style>
+  :root {
+    --primary: #ad083a;
+    --secondary: #711521;
+    --burgundy: #ad083a;
+  }
+  .bg-burgundy { background-color: var(--burgundy); }
+  .text-burgundy { color: var(--burgundy); }
+  .border-burgundy { border-color: var(--burgundy); }
+</style>
 
 <style>
   :root {
