@@ -55,18 +55,21 @@ export default function VouchersPage() {
               <h3 className="font-serif text-3xl text-white mb-8">Gutschein anfragen</h3>
               <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert('Anfrage gesendet!'); }}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <input type="text" placeholder="Vorname" className="bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors" required />
-                  <input type="text" placeholder="Nachname" className="bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors" required />
+                  <input type="text" placeholder="Vorname" title="Vorname" className="bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors" required />
+                  <input type="text" placeholder="Nachname" title="Nachname" className="bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors" required />
                 </div>
-                <input type="email" placeholder="E-Mail Adresse" className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors" required />
+                <input type="email" placeholder="E-Mail Adresse" title="E-Mail Adresse" className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors" required />
                 <div className="flex items-center gap-4">
                   <span className="text-white/60">Wert:</span>
-                  <select className="bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors cursor-pointer appearance-none flex-grow">
-                    <option className="bg-[#050505]">50 €</option>
-                    <option className="bg-[#050505]">100 €</option>
-                    <option className="bg-[#050505]">150 €</option>
-                    <option className="bg-[#050505]">200 €</option>
-                    <option className="bg-[#050505]">Individueller Betrag</option>
+                  <select 
+                    title="Gutschein Wert"
+                    className="bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors cursor-pointer appearance-none flex-grow"
+                  >
+                    <option className="bg-[#050505]" value="50 €">50 €</option>
+                    <option className="bg-[#050505]" value="100 €">100 €</option>
+                    <option className="bg-[#050505]" value="150 €">150 €</option>
+                    <option className="bg-[#050505]" value="200 €">200 €</option>
+                    <option className="bg-[#050505]" value="Individueller Betrag">Individueller Betrag</option>
                   </select>
                 </div>
                 <button type="submit" className="w-full bg-[#D4AF37] text-[#050505] px-10 py-4 font-sans text-[10px] uppercase tracking-[0.2em] font-medium hover:bg-white transition-colors duration-500 mt-8">

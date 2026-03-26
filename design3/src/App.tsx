@@ -20,10 +20,12 @@ export default function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/index.html" element={<Home />} />
             <Route path="/speisekarte" element={<MenuPage />} />
             <Route path="/philosophie" element={<PhilosophyPage />} />
             <Route path="/gutscheine" element={<VouchersPage />} />
             <Route path="/kontakt" element={<ContactPage />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </main>
         <FooterSection />

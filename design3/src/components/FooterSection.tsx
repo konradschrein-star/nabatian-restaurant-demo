@@ -80,10 +80,10 @@ export default function FooterSection() {
           <div className="flex flex-col items-start lg:items-end">
             <h4 className="font-sans text-[10px] uppercase tracking-[0.4em] text-[#D4AF37] mb-12">Folgen Sie uns</h4>
             <div className="flex gap-8 mb-16">
-              <a href="#" className="text-white/60 hover:text-[#D4AF37] transition-colors duration-300">
+              <a href="#" title="Instagram" className="text-white/60 hover:text-[#D4AF37] transition-colors duration-300">
                 <Instagram className="w-6 h-6" strokeWidth={1} />
               </a>
-              <a href="#" className="text-white/60 hover:text-[#D4AF37] transition-colors duration-300">
+              <a href="#" title="Facebook" className="text-white/60 hover:text-[#D4AF37] transition-colors duration-300">
                 <Facebook className="w-6 h-6" strokeWidth={1} />
               </a>
             </div>

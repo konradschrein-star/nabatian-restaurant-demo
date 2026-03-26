@@ -63,6 +63,7 @@ export default function HeroSection() {
                 <span className="font-sans text-[9px] uppercase tracking-[0.2em] text-white/40 mb-1">Datum</span>
                 <input 
                   type="date" 
+                  title="Reservierungsdatum"
                   className="bg-transparent text-white font-sans text-sm w-full focus:outline-none cursor-pointer [&::-webkit-calendar-picker-indicator]:filter [&::-webkit-calendar-picker-indicator]:invert"
                   defaultValue={new Date().toISOString().split('T')[0]}
                 />
@@ -74,14 +75,18 @@ export default function HeroSection() {
               <Clock className="w-5 h-5 text-[#D4AF37] font-light" strokeWidth={1} />
               <div className="flex flex-col items-start w-full">
                 <span className="font-sans text-[9px] uppercase tracking-[0.2em] text-white/40 mb-1">Uhrzeit</span>
-                <select className="bg-transparent text-white font-sans text-sm w-full focus:outline-none appearance-none cursor-pointer">
-                  <option className="bg-[#050505]">17:00</option>
-                  <option className="bg-[#050505]">17:30</option>
-                  <option className="bg-[#050505]">18:00</option>
-                  <option className="bg-[#050505]">18:30</option>
-                  <option className="bg-[#050505]" selected>19:00</option>
-                  <option className="bg-[#050505]">19:30</option>
-                  <option className="bg-[#050505]">20:00</option>
+                <select 
+                  title="Reservierungsuhrzeit"
+                  className="bg-transparent text-white font-sans text-sm w-full focus:outline-none appearance-none cursor-pointer"
+                  defaultValue="19:00"
+                >
+                  <option className="bg-[#050505]" value="17:00">17:00</option>
+                  <option className="bg-[#050505]" value="17:30">17:30</option>
+                  <option className="bg-[#050505]" value="18:00">18:00</option>
+                  <option className="bg-[#050505]" value="18:30">18:30</option>
+                  <option className="bg-[#050505]" value="19:00">19:00</option>
+                  <option className="bg-[#050505]" value="19:30">19:30</option>
+                  <option className="bg-[#050505]" value="20:00">20:00</option>
                 </select>
               </div>
             </div>
@@ -91,13 +96,17 @@ export default function HeroSection() {
               <Users className="w-5 h-5 text-[#D4AF37] font-light" strokeWidth={1} />
               <div className="flex flex-col items-start w-full">
                 <span className="font-sans text-[9px] uppercase tracking-[0.2em] text-white/40 mb-1">Personen</span>
-                <select className="bg-transparent text-white font-sans text-sm w-full focus:outline-none appearance-none cursor-pointer">
-                  <option className="bg-[#050505]">1 Person</option>
-                  <option className="bg-[#050505]" selected>2 Personen</option>
-                  <option className="bg-[#050505]">3 Personen</option>
-                  <option className="bg-[#050505]">4 Personen</option>
-                  <option className="bg-[#050505]">5 Personen</option>
-                  <option className="bg-[#050505]">6+ Personen</option>
+                <select 
+                  title="Anzahl Personen"
+                  className="bg-transparent text-white font-sans text-sm w-full focus:outline-none appearance-none cursor-pointer"
+                  defaultValue="2 Personen"
+                >
+                  <option className="bg-[#050505]" value="1 Person">1 Person</option>
+                  <option className="bg-[#050505]" value="2 Personen">2 Personen</option>
+                  <option className="bg-[#050505]" value="3 Personen">3 Personen</option>
+                  <option className="bg-[#050505]" value="4 Personen">4 Personen</option>
+                  <option className="bg-[#050505]" value="5 Personen">5 Personen</option>
+                  <option className="bg-[#050505]" value="6+ Personen">6+ Personen</option>
                 </select>
               </div>
             </div>
