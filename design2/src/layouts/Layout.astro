@@ -1,0 +1,31 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Willkommen im Nabatian Restaurant - authentische persische Küche in entspannter Atmosphäre." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Google Fonts: Maven Pro (Body) and Quattrocento Sans (Headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <title>{title} | Nabatian Restaurant</title>
+  </head>
+  <body class="font-sans antialiased bg-white text-text-primary min-h-screen flex flex-col">
+    <slot />
+  </body>
+</html>

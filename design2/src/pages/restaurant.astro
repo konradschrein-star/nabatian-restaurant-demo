@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import RestaurantIntro from '../components/RestaurantIntro.astro';
+---
+
+<Layout title="Das Restaurant | Nabatian">
+  <Header />
+  
+  <main class="pt-24">
+    <Hero 
+      title="UNSER RESTAURANT" 
+      subtitle="Ein Stück Persien im Herzen von Heilbronn."
+      backgroundImage="/assets/Authentisch_persisch_Fest.jpg"
+    />
+
+    <RestaurantIntro />
+
+    <!-- Atmosphere Section -->
+    <section class="py-24 bg-neutral-900 text-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <h2 class="text-4xl font-serif mb-6 italic text-primary">Ein Erlebnis für alle Sinne</h2>
+          <p class="text-xl text-neutral-400 leading-relaxed">
+            Wir haben einen Ort geschaffen, an dem die Zeit stillzustehen scheint. Tauchen Sie ein in eine Welt voller Farben, Düfte und Klänge.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+          <div class="p-8 rounded-2xl bg-neutral-800/50 border border-neutral-700 hover:border-primary/30 transition-colors">
+            <div class="w-16 h-16 bg-primary/20 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Geschmack</h3>
+            <p class="text-neutral-400 italic">Authentische Gewürze und Rezepte direkt aus dem Iran.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-neutral-800/50 border border-neutral-700 hover:border-primary/30 transition-colors">
+            <div class="w-16 h-16 bg-primary/20 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 17.5L18.5 21L15 17.5"/><path d="M18.5 13.5V21"/><path d="M10 13a5 5 0 0 0-5-5"/><path d="M10 5a5 5 0 0 1 5 5"/><path d="M5 10a5 5 0 0 0 5 5"/><path d="M15 10a5 5 0 0 1-5 5"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Optik</h3>
+            <p class="text-neutral-400 italic">Traditionelle Einrichtung, die Geschichten aus 1001 Nacht erzählt.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-neutral-800/50 border border-neutral-700 hover:border-primary/30 transition-colors">
+            <div class="w-16 h-16 bg-primary/20 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Akustik</h3>
+            <p class="text-neutral-400 italic">Sanfte orientalische Klänge begleiten Ihre kulinarische Reise.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Integration -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <div class="bg-neutral-50 rounded-3xl p-12 border border-neutral-100 shadow-sm text-center">
+            <h2 class="text-3xl font-serif text-neutral-900 mb-6 italic">Besuchen Sie uns am Sonnenbrunnen</h2>
+            <p class="text-lg text-neutral-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Sie finden uns in Heilbronn-Böckingen, direkt am Sonnenbrunnen. Ein Ort mit Tradition, der nun die Heimat unserer persischen Oase ist.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://www.google.com/maps/dir//Nabatian+Restaurant+%26+Catering+Im+Haselter+9%2F1+74080+Heilbronn" target="_blank" class="px-8 py-3 bg-neutral-900 text-white font-bold rounded-xl hover:bg-neutral-800 transition-colors">Route planen</a>
+                <a href="/kontakt" class="px-8 py-3 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-colors">Tisch reservieren</a>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

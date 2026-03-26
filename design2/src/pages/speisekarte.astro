@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PremiumMenu from '../components/PremiumMenu';
+import { menuData } from '../data/menu';
+---
+
+<Layout title="Speisekarte | Nabatian Restaurant">
+  <Header />
+  
+  <main class="pt-32 pb-24">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-6 italic">Unsere Speisekarte</h1>
+        <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+        <p class="text-lg text-neutral-600 leading-relaxed">
+          Entdecken Sie die Vielfalt der persischen Küche. Von traditionellen Grillgerichten bis hin zu vegetarischen Spezialitäten – 
+          wir verwenden ausschließlich frische Zutaten und authentische Gewürze.
+        </p>
+      </div>
+
+      <div class="bg-neutral-900 rounded-3xl p-4 md:p-12 shadow-2xl">
+        <PremiumMenu client:load initialItems={menuData} />
+      </div>
+
+      <div class="mt-24 bg-neutral-50 rounded-2xl p-8 md:p-12 border border-neutral-100 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="max-w-xl">
+          <h2 class="text-2xl font-bold text-neutral-900 mb-4">Möchten Sie lieber zu Hause genießen?</h2>
+          <p class="text-neutral-600">
+            Alle unsere Gerichte sind auch zur Abholung verfügbar. Rufen Sie uns einfach an oder kommen Sie vorbei.
+          </p>
+        </div>
+        <a href="/kontakt" class="bg-primary text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-secondary transition-colors shadow-lg shadow-primary/20 whitespace-nowrap">
+          Jetzt Reservieren
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  :root {
+    --primary: #ad083a;
+    --secondary: #711521;
+  }
+</style>

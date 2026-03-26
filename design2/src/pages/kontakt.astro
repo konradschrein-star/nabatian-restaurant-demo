@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PremiumContactForm from '../components/PremiumContactForm';
+import OpeningHours from '../components/OpeningHours.astro';
+---
+
+<Layout title="Kontakt & Reservierung | Nabatian Restaurant">
+  <Header />
+  
+  <main class="pt-32 pb-24">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-6 italic">Kontakt & Reservierung</h1>
+        <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+        <p class="text-lg text-neutral-600">
+          Wir freuen uns auf Ihren Besuch! Nutzen Sie unser Formular für Reservierungen oder Anfragen.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
+        
+        <!-- Contact Form Side -->
+        <div class="lg:col-2 bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-neutral-100">
+          <h2 class="text-2xl font-bold text-neutral-900 mb-8">Schreiben Sie uns</h2>
+          <PremiumContactForm client:load />
+        </div>
+
+        <!-- Info Sidebar -->
+        <div class="space-y-8">
+          <!-- Opening Hours Widget -->
+          <div class="bg-neutral-50 rounded-3xl p-8 border border-neutral-100 shadow-sm">
+            <h3 class="text-xl font-bold text-neutral-900 mb-6 flex items-center">
+              <span class="mr-3 text-primary">🕒</span> Öffnungszeiten
+            </h3>
+            <OpeningHours variant="light" />
+          </div>
+
+          <!-- Location Widget -->
+          <div class="bg-neutral-900 text-white rounded-3xl p-8 shadow-xl">
+            <h3 class="text-xl font-bold mb-6 flex items-center">
+              <span class="mr-3 text-primary">📍</span> Standort
+            </h3>
+            <p class="text-gray-300 mb-6">
+              Nabatian Restaurant<br/>
+              Im Haselter 9/1<br/>
+              74080 Heilbronn<br/>
+              Am Sonnenbrunnen
+            </p>
+            <a 
+              href="https://www.google.com/maps/place/Nabatian+Restaurant+%26+Catering/@49.140566,9.1864087,17z" 
+              target="_blank" 
+              class="inline-block w-full text-center bg-white/10 hover:bg-white/20 text-white py-3 rounded-xl transition-colors border border-white/20"
+            >
+              In Google Maps öffnen
+            </a>
+          </div>
+
+          <!-- Gift Card Widget -->
+          <div class="bg-primary text-white rounded-3xl p-8 shadow-xl shadow-primary/20">
+            <h3 class="text-xl font-bold mb-4">Gutscheine</h3>
+            <p class="text-white/80 mb-6">
+              Verschenken Sie ein Stück Persien! Gutscheine sind während der Öffnungszeiten vor Ort erhältlich oder können per Post versendet werden.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  :root {
+    --primary: #ad083a;
+    --secondary: #711521;
+  }
+</style>

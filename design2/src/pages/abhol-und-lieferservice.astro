@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout title="Abhol- und Lieferservice | Nabatian">
+  <Header />
+  
+  <main class="pt-24">
+    <Hero 
+      title="ABHOLSERVICE" 
+      subtitle="Holen Sie sich die Kulinarik Persiens direkt nach Hause."
+      backgroundImage="/assets/Authentisch_persisch_Fest.jpg"
+    />
+
+    <div class="container mx-auto px-4 py-16 max-w-5xl">
+      <div class="prose prose-lg max-w-none text-center mb-16">
+        <h2 class="text-4xl font-serif text-neutral-900 mb-6">Liebe Freunde der guten Kulinarik,</h2>
+        <p class="text-xl text-neutral-600">
+          Mit unserem persischen Abholservice können Sie sich den Genuss direkt in die eigenen vier Wände holen.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <!-- Delivery Info -->
+        <div class="bg-neutral-50 p-8 rounded-2xl border border-neutral-100 shadow-sm transition-transform hover:scale-[1.02] duration-300">
+          <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+            <span class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-serif italic text-lg shadow-sm">1</span>
+            Öffnungszeiten & Abholung
+          </h3>
+          
+          <div class="space-y-6">
+            <div class="p-4 bg-white rounded-xl border border-neutral-100 shadow-sm">
+              <p class="font-bold uppercase tracking-wider text-[10px] text-primary mb-1">Abendessen</p>
+              <p class="text-lg font-medium">Mittwoch bis Sonntag: <span class="text-neutral-900">17 – 22 Uhr</span></p>
+            </div>
+            <div class="p-4 bg-white rounded-xl border border-neutral-100 shadow-sm">
+                <p class="font-bold uppercase tracking-wider text-[10px] text-primary mb-1">Mittagessen</p>
+                <p class="text-lg font-medium">Sonntag: <span class="text-neutral-900">12 – 14 Uhr</span></p>
+            </div>
+            <div class="p-4 bg-white rounded-xl border border-neutral-100 shadow-sm">
+                <p class="font-bold uppercase tracking-wider text-[10px] text-primary mb-1">Persisches Frühstück</p>
+                <p class="text-lg font-medium">Sonntag: <span class="text-neutral-900">09 – 12 Uhr</span></p>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-8 border-t border-neutral-200">
+            <h4 class="font-bold text-neutral-900 mb-3 uppercase tracking-tighter">Standort:</h4>
+            <p class="text-neutral-700 leading-relaxed">
+              <a href="https://www.google.com/maps/place/Nabatian+Restaurant+%26+Catering/@49.1405625,9.1885974" target="_blank" class="hover:text-primary transition-colors flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary shrink-0 mt-1"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>
+                    Im Haselter 9/1, 74080 Heilbronn<br/>
+                    <span class="text-sm text-neutral-500 font-normal">Am Sonnenbrunnen in Böckingen</span>
+                </span>
+              </a>
+            </p>
+            <div class="mt-6 flex items-center gap-2 text-sm text-neutral-500 bg-white p-3 rounded-lg border border-neutral-100">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600"><rect x="1" y="3" width="22" height="18" rx="2" ry="2"/><path d="M7 2h10"/><path d="M7 22h10"/><path d="M2 8h20"/><path d="M2 16h20"/></svg>
+              <span>20 kostenlose Parkplätze direkt vor dem Restaurant.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sustainability Info -->
+        <div class="bg-white p-8 rounded-2xl border border-neutral-200 shadow-lg relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+          
+          <h3 class="text-2xl font-bold mb-6 flex items-center gap-3 relative z-10">
+            <span class="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center text-white font-serif italic text-lg shadow-sm">2</span>
+            Nachhaltigkeit & Genuss
+          </h3>
+          
+          <div class="prose prose-neutral relative z-10">
+            <p class="text-neutral-600">
+                Gönnen Sie sich etwas Besonderes! Bestellen Sie unsere persischen Spezialitäten vorab und holen Sie diese bequem ab – ganz ohne Mindestbestellwert.
+            </p>
+            
+            <div class="my-8 p-6 bg-neutral-50 rounded-xl border-l-4 border-primary shadow-sm">
+                <p class="font-bold text-neutral-900 mb-2 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    Nabatian Glas-Boxen:
+                </p>
+                <p class="text-neutral-700">
+                    Für nur <span class="font-bold text-2xl text-primary">12 €</span> können Sie unsere hochwertigen Mehrweg-Glasboxen erwerben. 
+                    So vermeiden wir gemeinsam unnötigen Müll und schützen die Umwelt.
+                </p>
+            </div>
+
+            <div class="flex items-start gap-3 text-sm text-neutral-500 italic">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <p>Aus Hygienegründen befüllen wir ausschließlich unsere hauseigenen Nabatian-Glasboxen.</p>
+            </div>
+          </div>
+          
+          <div class="mt-10 relative z-10">
+            <a href="/speisekarte" class="group flex items-center justify-center gap-3 w-full py-5 bg-neutral-900 text-white font-bold rounded-xl hover:bg-primary transition-all shadow-md active:scale-95">
+                Speisekarte & Bestellung
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

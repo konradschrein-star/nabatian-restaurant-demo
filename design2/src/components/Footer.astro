@@ -1,0 +1,136 @@
+---
+const year = new Date().getFullYear();
+
+const footerLinks = [
+  { label: "Speisekarte", href: "/speisekarte" },
+  { label: "Reservierung", href: "/kontakt" },
+  { label: "Über uns", href: "/uber-uns" },
+  { label: "Gutscheine", href: "/gutschein" },
+  { label: "Impressum", href: "/impressum" },
+  { label: "Datenschutz", href: "/datenschutz" },
+];
+---
+
+<footer class="bg-neutral-950 text-white pt-24 pb-12 relative overflow-hidden">
+  <!-- Subtle Background Pattern/Glow -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[300px] bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-8 mb-20">
+      
+      <!-- Brand & Info -->
+      <div class="lg:col-span-4 space-y-8">
+        <a href="/" class="flex flex-col items-start group/footer-logo">
+          <h2 class="text-3xl font-serif font-bold tracking-[0.25em] text-white group-hover/footer-logo:text-primary transition-colors leading-none">NABATIAN</h2>
+          <span class="text-[9px] tracking-[0.4em] text-neutral-500 uppercase mt-2 font-medium">Persisches Restaurant & Catering</span>
+        </a>
+        <p class="text-neutral-400 text-sm leading-relaxed max-w-sm italic">
+          Entdecken Sie die Vielfalt der persischen Küche. Wir bereiten jedes Gericht mit Hingabe, frischen Zutaten und jahrhundertealten Gewürzkombinationen für Sie zu.
+        </p>
+        <div class="flex items-center gap-4 pt-4">
+          <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300 group/social" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-neutral-400 group-hover/social:text-white"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300 group/social" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-neutral-400 group-hover/social:text-white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="lg:col-span-2 space-y-8">
+        <h3 class="text-xs font-bold tracking-[0.2em] uppercase text-primary">Navigation</h3>
+        <ul class="space-y-4">
+          {footerLinks.map(link => (
+            <li>
+              <a href={link.href} class="text-[13px] text-neutral-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group/flink">
+                <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover/flink:opacity-100 transition-opacity"></span>
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="lg:col-span-3 space-y-8">
+        <h3 class="text-xs font-bold tracking-[0.2em] uppercase text-primary">Kontakt</h3>
+        <div class="space-y-6">
+          <div class="flex items-start gap-4 group/item">
+            <div class="w-8 h-8 rounded-lg bg-neutral-900 border border-white/5 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <p class="text-sm text-white font-medium">Unser Standort</p>
+              <p class="text-[13px] text-neutral-400 mt-1 leading-relaxed">Im Haselter 9/1<br/>74080 Heilbronn</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4 group/item">
+            <div class="w-8 h-8 rounded-lg bg-neutral-900 border border-white/5 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <p class="text-sm text-white font-medium">Reservierung</p>
+              <a href="tel:071312050510" class="text-[13px] text-neutral-400 hover:text-white transition-colors mt-1 block">07131 2050510</a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 group/item">
+            <div class="w-8 h-8 rounded-lg bg-neutral-900 border border-white/5 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+            </div>
+            <div>
+              <p class="text-sm text-white font-medium">E-Mail</p>
+              <a href="mailto:info@nabatian.de" class="text-[13px] text-neutral-400 hover:text-white transition-colors mt-1 block">info@nabatian.de</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Opening Hours Widget -->
+      <div class="lg:col-span-3 space-y-8">
+        <h3 class="text-xs font-bold tracking-[0.2em] uppercase text-primary">Öffnungszeiten</h3>
+        <div class="bg-neutral-900/50 rounded-2xl p-6 border border-white/5 backdrop-blur-sm">
+          <div class="space-y-4">
+            <div class="flex justify-between items-center text-[13px]">
+              <span class="text-neutral-400">Mo, Di, Fr, Sa</span>
+              <span class="text-white font-medium">17:00 – 22:00</span>
+            </div>
+            <div class="flex justify-between items-center text-[13px]">
+              <span class="text-neutral-400">Mi, Do</span>
+              <span class="text-white font-medium">12:00 – 22:00</span>
+            </div>
+            <div class="flex justify-between items-center text-[13px]">
+              <span class="text-neutral-400">Sonntag</span>
+              <span class="text-white font-medium font-bold text-primary">Ruhetag</span>
+            </div>
+            <div class="pt-4 border-t border-white/5 mt-4">
+              <p class="text-[11px] text-neutral-500 italic leading-snug">Frühstück & Mittagstisch auf Anfrage für Gruppen ab 10 Personen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider & Bottom Bar -->
+    <div class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+      <p class="text-[11px] text-neutral-500 tracking-wider">
+        &copy; {year} NABATIAN RESTAURANT. ALLE RECHTE VORBEHALTEN.
+      </p>
+      <div class="flex items-center gap-8">
+        <button id="back-to-top" class="text-[10px] font-bold tracking-[0.3em] uppercase text-neutral-400 hover:text-primary transition-colors flex items-center gap-2 group/top">
+          Nach Oben
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover/top:-translate-y-1 transition-transform"><polyline points="18 15 12 9 6 15"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('back-to-top')?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+

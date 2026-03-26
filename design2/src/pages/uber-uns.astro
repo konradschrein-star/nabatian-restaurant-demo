@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout title="Über uns | Nabatian">
+  <Header />
+  
+  <main class="pt-24">
+    <Hero 
+      title="ÜBER UNS" 
+      subtitle="Tradition, Leidenschaft und die wahre Kulinarik Persiens."
+      backgroundImage="/assets/Authentisch_persisch_Fest.jpg"
+    />
+
+    <!-- Intro Text -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <div class="prose prose-xl prose-neutral mx-auto text-center mb-16">
+          <h2 class="text-4xl font-serif text-neutral-900 mb-8 italic">Salam und herzlich Willkommen</h2>
+          <p class="text-lg leading-relaxed text-neutral-600">
+            Wir sind das Nabatian, Ihr persisches Restaurant. Wir haben es uns zur Aufgabe gemacht, die Kulinarik Persiens auf die hiesigen Esstische zu befördern.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-neutral-700 leading-relaxed text-lg">
+          <div class="space-y-6">
+            <p>
+                Wir leben den <strong>Ethno-Food Gedanken</strong>. Das heißt, wenn Sie auf der Suche nach dem besonderen Geschmackserlebnis sind und mal etwas Neues ausprobieren möchten, sind Sie bei uns genau richtig.
+            </p>
+            <p>
+                Die persische Küche ist etwas sehr Besonderes – sie vereint Jahrtausende alte Traditionen mit einer unglaublichen Vielfalt an Aromen.
+            </p>
+          </div>
+          <div class="space-y-6">
+            <p>
+                Unsere Gerichte zeichnen sich vor allem durch die <strong>Qualität und Frische</strong> der Zutaten aus. Wir verwenden eine Vielzahl von orientalischen Gewürzen, Kräutern und frischem Gemüse. 
+            </p>
+            <p>
+                Ob Fleischliebhaber oder Vegetarier – bei uns kommt jeder Gast voll auf seine Kosten. Wir legen Wert auf ein ehrliches Preis-Leistungs-Verhältnis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Grid -->
+    <section class="pb-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="aspect-square overflow-hidden rounded-2xl shadow-md group">
+            <img src="https://nabatian.de/wp-content/uploads/2021/05/heilbronner-menschen-3.jpg" alt="Team Nabatian" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          </div>
+          <div class="aspect-square overflow-hidden rounded-2xl shadow-md group">
+            <img src="https://nabatian.de/wp-content/uploads/2021/05/heilbronner-menschen-1.jpg" alt="Restaurant Atmosphäre" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          </div>
+          <div class="aspect-square overflow-hidden rounded-2xl shadow-md group">
+            <img src="https://nabatian.de/wp-content/uploads/2021/05/heilbronner-menschen-2.jpg" alt="Kulinarik" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          </div>
+          <div class="aspect-square overflow-hidden rounded-2xl shadow-md group">
+            <img src="https://nabatian.de/wp-content/uploads/2021/05/heilbronner-menschen-4.jpg" alt="Gäste" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-24 bg-neutral-50 border-y border-neutral-100">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-serif mb-8">Lust auf ein orientalisches Erlebnis?</h3>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="/speisekarte" class="px-10 py-4 bg-primary text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all">Speisekarte ansehen</a>
+                <a href="/kontakt" class="px-10 py-4 bg-white text-neutral-900 border border-neutral-200 font-bold rounded-xl shadow-sm hover:bg-neutral-50 transition-all">Tisch reservieren</a>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

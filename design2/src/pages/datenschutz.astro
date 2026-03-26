@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout title="Datenschutz | Nabatian Restaurant">
+  <Header />
+  
+  <main class="pt-24">
+    <Hero 
+      title="DATENSCHUTZ" 
+      subtitle="Informationen zum Schutz Ihrer persönlichen Daten."
+      backgroundImage="/assets/Authentisch_persisch_Fest.jpg"
+    />
+
+    <section class="max-w-4xl mx-auto px-6 py-20">
+      <div class="prose prose-lg max-w-none text-text-muted leading-relaxed">
+        <h2 class="text-3xl font-serif text-brand-red mb-8">Datenschutz­erklärung</h2>
+        
+        <p class="mb-8">Wir informieren Sie nachfolgend gemäß den gesetzlichen Vorgaben des Datenschutzrechts (insb. gemäß BDSG n.F. und der europäischen Datenschutz-Grundverordnung ‚DS-GVO‘) über die Art, den Umfang und Zweck der Verarbeitung personenbezogener Daten durch unser Unternehmen. Diese Datenschutzerklärung gilt auch für unsere Websites und Sozial-Media-Profile. Bezüglich der Definition von Begriffen wie etwa „personenbezogene Daten“ oder „Verarbeitung“ verweisen wir auf Art. 4 DS-GVO.</p>
+
+        <h3 class="text-2xl font-serif text-text-primary mb-4">Name und Kontaktdaten des Verantwortlichen</h3>
+        <p>Unser Verantwortliche/r (nachfolgend „Verantwortlicher“) i.S.d. Art. 4 Zif. 7 DS-GVO ist:</p>
+        <div class="bg-gray-50 p-6 rounded-lg mb-8 border-l-4 border-brand-red">
+          <p class="font-bold">Nabatian Restaurant & Catering</p>
+          <p>Im Haselter 9/1</p>
+          <p>74080 Heilbronn</p>
+          <p>Geschäftsführer: Nasrin Nabatian</p>
+          <p>E-Mail: info@nabatian.de</p>
+        </div>
+
+        <h3 class="text-2xl font-serif text-text-primary mb-4">Datenarten, Zwecke der Verarbeitung und Kategorien betroffener Personen</h3>
+        <p>Wir verarbeiten Nutzungsdaten (Zugriffszeiten, besuchte Websites etc.), Bestandsdaten (Name, Adresse etc.), Kontaktdaten (Telefonnummer, E-Mail etc.), Zahlungsdaten (Bankdaten, Zahlungshistorie etc.), Vertragsdaten (Gegenstand des Vertrages, Laufzeit etc.), Inhaltsdaten (Texteingaben, Videos, Fotos etc.) und Kommunikationsdaten (IP-Adresse etc.).</p>
+        
+        <h4 class="text-xl font-serif text-text-primary mt-6 mb-2">Zwecke der Verarbeitung nach Art. 13 Abs. 1 c) DS-GVO</h4>
+        <ul class="list-disc pl-6 mb-6">
+          <li>Abwicklung von Verträgen</li>
+          <li>Website technisch und wirtschaftlich optimieren</li>
+          <li>Erfüllung vertraglicher Verpflichtungen</li>
+          <li>Optimierung und statistische Auswertung unserer Dienste</li>
+          <li>Nutzererfahrung verbessern</li>
+          <li>Kontaktanfragen abwickeln</li>
+          <li>Websites mit Funktionen und Inhalten bereitstellen</li>
+        </ul>
+
+        <h3 class="text-2xl font-serif text-text-primary mb-4">Rechtsgrundlagen der Verarbeitung</h3>
+        <p>Nachfolgend informieren wir Sie über die Rechtsgrundlagen der Verarbeitung personenbezogener Daten:</p>
+        <ul class="list-decimal pl-6 mb-8">
+          <li>Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DS-GVO)</li>
+          <li>Erfüllung eines Vertrags oder vorvertragliche Maßnahmen (Art. 6 Abs. 1 S. 1 lit. b) DS-GVO)</li>
+          <li>Erfüllung einer rechtlichen Verpflichtung (Art. 6 Abs. 1 S. 1 lit. c) DS-GVO)</li>
+          <li>Wahrung berechtigter Interessen (Art. 6 Abs. 1 S. 1 lit. f) DS-GVO)</li>
+        </ul>
+
+        <h3 class="text-2xl font-serif text-text-primary mb-4">Weitergabe an Dritte und Datenübermittlung in Drittstaaten</h3>
+        <p>Ohne Ihre Einwilligung geben wir grundsätzlich keine Daten an Dritte weiter. Sollte dies doch der Fall sein, dann erfolgt die Weitergabe auf der Grundlage der zuvor genannten Rechtsgrundlagen. Wir setzen zudem sorgfältig ausgewählte Auftragsverarbeiter (Art. 28 DS-GVO) ein. Sollte eine Verarbeitung in Drittstaaten (außerhalb der EU/EWR) stattfinden, erfolgt dies nur, wenn die Voraussetzungen der Art. 44 ff. DS-GVO erfüllt sind.</p>
+
+        <h3 class="text-2xl font-serif text-text-primary mb-4">Löschung von Daten und Speicherdauer</h3>
+        <p>Ihre Daten werden gelöscht oder gesperrt, sobald die zur Verarbeitung erteilte Einwilligung widerrufen wird oder der Zweck für die Speicherung entfällt, es sei denn deren weitere Aufbewahrung ist zu Beweiszwecken erforderlich oder gesetzliche Aufbewahrungspflichten (z.B. 6 Jahre für Geschäftsbriefe, 10 Jahre für Buchungsbelege) stehen dem entgegen.</p>
+
+        <h3 class="text-2xl font-serif text-text-primary mb-4">Cookies</h3>
+        <p>Wir verwenden Cookies (kleine Textdateien, die Ihr Internetbrowser auf Ihrem Rechner ablegt). Zu den Cookies zählen auch die sog. „Nutzer-IDs“. Es werden notwendige (essentielle) Cookies, Session-Cookies und persistente Cookies unterschieden. Sie können die Speicherung von Cookies in Ihren Browsereinstellungen verhindern oder einschränken.</p>
+
+        <h3 class="text-2xl font-serif text-text-primary mb-4">Kontaktformular / E-Mail</h3>
+        <p>Bei der Kontaktaufnahme mit uns werden Ihre Angaben zum Zwecke der Abwicklung der Kontaktanfrage verarbeitet (Art. 6 Abs. 1 S. 1 lit. a) oder f) DS-GVO). Wir löschen die Daten, wenn sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
+
+        <h3 class="text-2xl font-serif text-text-primary mb-4">Google Analytics & Maps</h3>
+        <p>Wir nutzen Google Analytics zur Analyse der Website-Nutzung und Google Maps zur Darstellung von Karten. Hierbei werden Daten (u.a. IP-Adresse) an Google übertragen. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DS-GVO).</p>
+
+        <h3 class="text-2xl font-serif text-text-primary mb-4">Ihre Rechte als betroffene Person</h3>
+        <ul class="list-disc pl-6 mb-8">
+          <li>Recht auf Widerruf der Einwilligung (Art. 7 DS-GVO)</li>
+          <li>Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DS-GVO)</li>
+          <li>Recht auf Auskunft (Art. 15 DS-GVO)</li>
+          <li>Recht auf Berichtigung (Art. 16 DS-GVO)</li>
+          <li>Recht auf Löschung (Art. 17 DS-GVO)</li>
+          <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DS-GVO)</li>
+          <li>Recht auf Datenübertragbarkeit (Art. 20 DS-GVO)</li>
+          <li>Recht auf Beschwerde bei einer Aufsichtsbehörde (Art. 77 DS-GVO)</li>
+        </ul>
+
+        <p class="mt-12 text-sm italic">Stand: 25.03.2024</p>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
