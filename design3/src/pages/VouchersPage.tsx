@@ -83,7 +83,7 @@ export default function VouchersPage() {
                 initial={{ opacity: 0, x: 50, rotate: 5 }}
                 animate={{ opacity: 1, x: 0, rotate: 5 }}
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                src="/Gutschein-RS-1-768x1024.jpg"
+                src={`${import.meta.env.BASE_URL}Gutschein-RS-1-768x1024.jpg`}
                 alt="Gutschein Rückseite"
                 className="absolute top-[10%] right-0 w-[70%] rounded-sm shadow-2xl border border-white/5"
                 referrerPolicy="no-referrer"
@@ -92,7 +92,7 @@ export default function VouchersPage() {
                 initial={{ opacity: 0, x: -50, rotate: -5 }}
                 animate={{ opacity: 1, x: 0, rotate: -5 }}
                 transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                src="/Gutschein-VS-1-768x1024.jpg"
+                src={`${import.meta.env.BASE_URL}Gutschein-VS-1-768x1024.jpg`}
                 alt="Gutschein Vorderseite"
                 className="absolute top-[20%] left-0 w-[70%] rounded-sm shadow-2xl border border-white/5 z-10"
                 referrerPolicy="no-referrer"

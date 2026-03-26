@@ -34,7 +34,7 @@ export default function PhilosophyPage() {
             className="relative h-[600px] md:h-[800px]"
           >
             <img 
-              src="/Authentisch_persisch_Fest.jpg" 
+              src={`${import.meta.env.BASE_URL}Authentisch_persisch_Fest.jpg`} 
               alt="Persian Cuisine" 
               className="w-full h-full object-cover rounded-t-full rounded-b-3xl opacity-80"
               referrerPolicy="no-referrer"

@@ -13,7 +13,7 @@ export default function HeroSection() {
           initial={{ scale: 1.05 }}
           animate={{ scale: 1 }}
           transition={{ duration: 15, ease: 'easeOut' }}
-          src="/Authentisch_persisch_Fest.jpg"
+          src={`${import.meta.env.BASE_URL}Authentisch_persisch_Fest.jpg`}
           alt="Persian Cuisine"
           className="w-full h-full object-cover object-center opacity-50"
           referrerPolicy="no-referrer"

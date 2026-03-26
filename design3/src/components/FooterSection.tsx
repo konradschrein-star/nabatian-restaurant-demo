@@ -12,7 +12,7 @@ export default function FooterSection() {
           <div className="flex flex-col items-start lg:col-span-1">
             <Link to="/" className="mb-12">
               <img 
-                src="/cropped-Nabatian_Logo.png" 
+                src={`${import.meta.env.BASE_URL}cropped-Nabatian_Logo.png`} 
                 alt="Nabatian" 
                 className="h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
               />

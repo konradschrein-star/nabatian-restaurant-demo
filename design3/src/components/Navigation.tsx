@@ -40,7 +40,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link to="/" className="flex items-center z-50">
             <img 
-              src="/cropped-Nabatian_Logo.png" 
+              src={`${import.meta.env.BASE_URL}cropped-Nabatian_Logo.png`} 
               alt="Nabatian" 
               className="h-10 md:h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
             />

@@ -2,12 +2,12 @@
 const year = new Date().getFullYear();
 
 const footerLinks = [
-  { label: "Speisekarte", href: "/speisekarte" },
-  { label: "Reservierung", href: "/kontakt" },
-  { label: "Über uns", href: "/uber-uns" },
-  { label: "Gutscheine", href: "/gutschein" },
-  { label: "Impressum", href: "/impressum" },
-  { label: "Datenschutz", href: "/datenschutz" },
+  { label: "Speisekarte", href: `${import.meta.env.BASE_URL}speisekarte` },
+  { label: "Reservierung", href: `${import.meta.env.BASE_URL}kontakt` },
+  { label: "Über uns", href: `${import.meta.env.BASE_URL}uber-uns` },
+  { label: "Gutscheine", href: `${import.meta.env.BASE_URL}gutschein` },
+  { label: "Impressum", href: `${import.meta.env.BASE_URL}impressum` },
+  { label: "Datenschutz", href: `${import.meta.env.BASE_URL}datenschutz` },
 ];
 ---
 
@@ -20,7 +20,7 @@ const footerLinks = [
       
       <!-- Brand & Info -->
       <div class="lg:col-span-4 space-y-8">
-        <a href="/" class="flex flex-col items-start group/footer-logo">
+        <a href={import.meta.env.BASE_URL} class="flex flex-col items-start group/footer-logo">
           <h2 class="text-3xl font-serif font-bold tracking-[0.25em] text-white group-hover/footer-logo:text-primary transition-colors leading-none">NABATIAN</h2>
           <span class="text-[9px] tracking-[0.4em] text-neutral-500 uppercase mt-2 font-medium">Persisches Restaurant & Catering</span>
         </a>

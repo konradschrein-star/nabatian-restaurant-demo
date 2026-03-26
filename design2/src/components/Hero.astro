@@ -8,7 +8,7 @@ interface Props {
 const { 
   title = "NABATIAN RESTAURANT", 
   subtitle = "Persische Köstlichkeiten im Herzen von Heilbronn",
-  backgroundImage = "/assets/Authentisch_persisch_Fest.jpg"
+  backgroundImage = `${import.meta.env.BASE_URL}assets/Authentisch_persisch_Fest.jpg`
 } = Astro.props;
 ---
 
@@ -40,7 +40,7 @@ const {
     
     <div class="flex flex-col sm:flex-row items-center justify-center gap-6 opacity-0 animate-fade-in-up" style="animation-delay: 0.8s; animation-fill-mode: forwards;">
       <a 
-        href="/speisekarte" 
+        href={`${import.meta.env.BASE_URL}speisekarte`} 
         class="group relative px-10 py-5 bg-primary text-black font-bold rounded-lg overflow-hidden transition-all hover:shadow-[0_0_30px_rgba(255,215,0,0.4)]"
       >
         <span class="relative z-10 flex items-center gap-2">
@@ -50,7 +50,7 @@ const {
       </a>
       
       <a 
-        href="/kontakt" 
+        href={`${import.meta.env.BASE_URL}kontakt`} 
         class="px-10 py-5 border border-white/30 text-white font-bold rounded-lg hover:bg-white hover:text-black transition-all backdrop-blur-sm"
       >
         Tisch reservieren

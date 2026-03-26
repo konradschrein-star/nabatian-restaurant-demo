@@ -61,7 +61,7 @@ const borderClasses = variant === 'light' ? 'border-neutral-100' : 'border-white
     </p>
     
     <a 
-      href="/kontakt" 
+      href={`${import.meta.env.BASE_URL}kontakt`} 
       class={`inline-flex items-center gap-2 text-sm font-bold tracking-tight transition-all
         ${variant === 'light' 
           ? 'text-neutral-900 hover:text-primary' 

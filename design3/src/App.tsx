@@ -14,7 +14,7 @@ import ContactPage from './pages/ContactPage';
 
 export default function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="font-sans text-white bg-[#050505] selection:bg-[#D4AF37] selection:text-[#050505] min-h-screen flex flex-col">
         <Navigation />
         <main className="flex-grow">
