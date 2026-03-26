@@ -7,7 +7,7 @@ export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
     plugins: [react(), tailwindcss()],
-    base: '/design%204/dist/',
+    base: '/design3/dist/',
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },
